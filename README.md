@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏹 ArcherHub — All-in-One Archery Management & Booking System
 
-## Getting Started
+ระบบบริหารจัดการสนามยิงธนูและจองเลนแบบครบวงจร (SaaS Monorepo with Next.js Turborepo & LINE LIFF)
 
-First, run the development server:
+---
+
+## 🏗️ Architecture & Apps
+
+| Service / App | Port | Description |
+| :--- | :--- | :--- |
+| **`apps/web`** | `http://localhost:3000` | Landing Page, SaaS Pricing, Shop Registration, Super Admin, Range Admin Dashboard & Walk-in POS |
+| **`apps/liff`** | `http://localhost:3001` | LINE LIFF Customer Booking Web App (Interactive Lane Map, Digital Waiver, PromptPay QR, E-Ticket, Score Companion) |
+| **`packages/ui`** | - | Shared UI Components, Design System, ThemeProvider, and I18n Dual-Language Engine |
+| **`packages/store`** | - | In-memory Mock Data & State Store for Ranges, Lanes, Bookings, and Scores |
+| **`packages/types`** | - | TypeScript Definitions & Data Models |
+
+---
+
+## ⚡ Quick Start with `make`
+
+โปรเจกต์มี `Makefile` สำหรับสั่งการได้อย่างรวดเร็ว:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# แสดงรายการคำสั่งทั้งหมด
+make help
+
+# ติดตั้ง dependencies
+make install
+
+# รัน Dev Server ทั้งระบบ (Web :3000 และ LIFF :3001)
+make dev
+
+# สั่ง build ตรวจสอบความถูกต้องทั้งโปรเจกต์
+make build
+
+# ตรวจสอบ TypeScript Types และ Lint
+make check-types
+make lint
+
+# ล้างแคชการ build
+make clean
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🐳 Docker & Docker Compose
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+สามารถรันทั้งระบบบน Docker ได้ทันที:
 
-## Learn More
+### 1. รันในโหมด Background
+```bash
+make docker-up
+# หรือรันตรงด้วย: docker compose up -d --build
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. ดูสถานะและ Log
+```bash
+# ดู Log แบบ Real-time
+make docker-logs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# ดูสถานะคอนเทนเนอร์
+make docker-ps
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. หยุดการทำงาน
+```bash
+make docker-down
+```
 
-## Deploy on Vercel
+เมื่อรันแล้ว สามารถเข้าใช้งานได้ที่:
+- **Web App / Admin POS**: [http://localhost:3000](http://localhost:3000)
+- **Customer LINE LIFF**: [http://localhost:3001](http://localhost:3001)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Dual Language Support (🇹🇭 TH / 🇬🇧 EN)
+
+ระบบรองรับสองภาษาไทย-อังกฤษทั้งระบบ (Persistent Language Switcher via localStorage `archerhub_lang`).
