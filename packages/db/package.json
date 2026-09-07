@@ -1,0 +1,22 @@
+{
+  "name": "@archery/db",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@archery/types": "*",
+    "@libsql/client": "^0.14.0",
+    "drizzle-orm": "^0.39.0"
+  },
+  "devDependencies": {
+    "@archery/typescript-config": "*",
+    "@types/node": "^20",
+    "drizzle-kit": "^0.30.0",
+    "typescript": "^5"
+  }
+}

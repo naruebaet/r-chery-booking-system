@@ -44,3 +44,7 @@ next-env.d.ts
 
 # turbo
 .turbo
+
+# local database & scratch
+data/
+scratch/

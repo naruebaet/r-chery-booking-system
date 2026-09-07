@@ -5,8 +5,54 @@ const STORAGE_KEY_SHOPS = 'archery_thai_shops_v2';
 const STORAGE_KEY_BOOKINGS = 'archery_thai_bookings_v2';
 const STORAGE_KEY_SCORES = 'archery_thai_scores_v2';
 
+export const getApiBase = (): string => {
+  if (typeof window !== 'undefined') {
+    // If running in liff app (port 3001) or different port, point to web server (3000)
+    if (window.location.port === '3001') {
+      return 'http://localhost:3000';
+    }
+    return '';
+  }
+  return process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+};
+
+// Auto-sync initial data from API in background on client-side
+let hasStartedBackgroundSync = false;
+export const triggerBackgroundSync = () => {
+  if (typeof window === 'undefined' || hasStartedBackgroundSync) return;
+  hasStartedBackgroundSync = true;
+
+  const apiBase = getApiBase();
+  // Fetch shops
+  fetch(`${apiBase}/api/shops`)
+    .then((res) => (res.ok ? res.json() : null))
+    .then((shops: Shop[] | null) => {
+      if (shops && Array.isArray(shops) && shops.length > 0) {
+        localStorage.setItem(STORAGE_KEY_SHOPS, JSON.stringify(shops));
+        window.dispatchEvent(new Event('archery-shops-updated'));
+      }
+    })
+    .catch(() => {
+      // Fallback silently to localStorage
+    });
+
+  // Fetch bookings
+  fetch(`${apiBase}/api/bookings`)
+    .then((res) => (res.ok ? res.json() : null))
+    .then((bookings: Booking[] | null) => {
+      if (bookings && Array.isArray(bookings)) {
+        localStorage.setItem(STORAGE_KEY_BOOKINGS, JSON.stringify(bookings));
+        window.dispatchEvent(new Event('archery-bookings-updated'));
+      }
+    })
+    .catch(() => {
+      // Fallback silently to localStorage
+    });
+};
+
 export const getStoredShops = (): Shop[] => {
   if (typeof window === 'undefined') return INITIAL_SHOPS;
+  triggerBackgroundSync();
   try {
     const data = localStorage.getItem(STORAGE_KEY_SHOPS);
     if (!data) {
@@ -39,10 +85,19 @@ export const updateShop = (updatedShop: Shop) => {
     shops.push(updatedShop);
   }
   saveShops(shops);
+
+  // Async sync to API
+  const apiBase = getApiBase();
+  fetch(`${apiBase}/api/shops/${updatedShop.slug || updatedShop.id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(updatedShop),
+  }).catch(() => {});
 };
 
 export const getStoredBookings = (shopId?: string): Booking[] => {
   if (typeof window === 'undefined') return INITIAL_BOOKINGS;
+  triggerBackgroundSync();
   try {
     const data = localStorage.getItem(STORAGE_KEY_BOOKINGS);
     const bookings: Booking[] = data ? JSON.parse(data) : INITIAL_BOOKINGS;
@@ -64,7 +119,7 @@ export const createBooking = (booking: Booking) => {
   bookings.unshift(booking);
   localStorage.setItem(STORAGE_KEY_BOOKINGS, JSON.stringify(bookings));
 
-  // Update lane status
+  // Update lane status locally
   const shops = getStoredShops();
   const shop = shops.find((s) => s.id === booking.shopId);
   if (shop) {
@@ -88,6 +143,14 @@ export const createBooking = (booking: Booking) => {
   }
 
   window.dispatchEvent(new Event('archery-bookings-updated'));
+
+  // Async sync to Database API
+  const apiBase = getApiBase();
+  fetch(`${apiBase}/api/bookings`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(booking),
+  }).catch(() => {});
 };
 
 export interface WalkInParams {
@@ -95,7 +158,7 @@ export interface WalkInParams {
   laneId: string;
   customerName: string;
   customerPhone: string;
-  durationMinutes: number; // 30, 60, 90, 120
+  durationMinutes: number;
   equipmentAddons: { id: string; name: string; price: number; details: string }[];
   coachAddon?: { id: string; name: string; price: number };
   paymentMethod: 'cash' | 'promptpay' | 'credit_card' | 'membership_quota';
@@ -147,12 +210,11 @@ export const createWalkInBooking = (params: WalkInParams): Booking | null => {
     totalAmount: params.totalAmount,
     isWalkIn: true,
     createdAt: now.toISOString(),
-    checkedInAt: now.toISOString(), // Immediately checked-in for walk-in
+    checkedInAt: now.toISOString(),
   };
 
   createBooking(newBooking);
 
-  // Directly set lane current booking details
   lane.status = 'occupied';
   lane.currentBooking = {
     bookingId: newBooking.id,
@@ -195,6 +257,14 @@ export const extendLaneSession = (shopId: string, laneId: string, additionalMinu
 
   updateShop(shop);
   window.dispatchEvent(new Event('archery-shops-updated'));
+
+  // Async sync to Database API
+  const apiBase = getApiBase();
+  fetch(`${apiBase}/api/lanes/${laneId}/extend`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ shopId, additionalMinutes }),
+  }).catch(() => {});
 };
 
 export const finishLaneSession = (shopId: string, laneId: string) => {
@@ -211,6 +281,14 @@ export const finishLaneSession = (shopId: string, laneId: string) => {
 
   updateShop(shop);
   window.dispatchEvent(new Event('archery-shops-updated'));
+
+  // Async sync to Database API
+  const apiBase = getApiBase();
+  fetch(`${apiBase}/api/lanes/${laneId}/finish`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ shopId }),
+  }).catch(() => {});
 };
 
 export const checkInBooking = (bookingId: string) => {
@@ -221,6 +299,12 @@ export const checkInBooking = (bookingId: string) => {
     booking.checkedInAt = new Date().toISOString();
     localStorage.setItem(STORAGE_KEY_BOOKINGS, JSON.stringify(bookings));
     window.dispatchEvent(new Event('archery-bookings-updated'));
+
+    // Async sync to Database API
+    const apiBase = getApiBase();
+    fetch(`${apiBase}/api/bookings/${bookingId}/check-in`, {
+      method: 'POST',
+    }).catch(() => {});
   }
 };
 
@@ -241,4 +325,12 @@ export const saveScoreEntry = (score: ScoreEntry) => {
   scores.unshift(score);
   localStorage.setItem(STORAGE_KEY_SCORES, JSON.stringify(scores));
   window.dispatchEvent(new Event('archery-scores-updated'));
+
+  // Async sync to Database API
+  const apiBase = getApiBase();
+  fetch(`${apiBase}/api/scores`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(score),
+  }).catch(() => {});
 };

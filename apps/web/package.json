@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@archery/db": "*",
     "@archery/store": "*",
     "@archery/types": "*",
     "@archery/ui": "*",
