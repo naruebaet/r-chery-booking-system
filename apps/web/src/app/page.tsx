@@ -6,7 +6,7 @@ import { Navbar } from '@/components/navbar';
 import { RoiCalculator } from '@/components/roi-calculator';
 import { FaqAccordion } from '@/components/faq-accordion';
 import { MobileShowcaseMockup } from '@/components/mobile-showcase-mockup';
-import { MobileShowcase3D } from '@/components/mobile-showcase-3d';
+import { RangeTacticalStage } from '@/components/range-tactical-stage';
 import { getStoredShops } from '@archery/store';
 import { Shop } from '@archery/types';
 import { useI18n } from '@archery/ui';
@@ -34,6 +34,7 @@ import {
   ShieldAlert,
   Play,
   Layers,
+  Radio,
 } from 'lucide-react';
 
 export default function PromotionalLandingPage() {
@@ -46,46 +47,49 @@ export default function PromotionalLandingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#050b14] text-slate-100 flex flex-col selection:bg-[#074c88] selection:text-white">
+    <div className="min-h-screen bg-[#060e1a] text-slate-100 flex flex-col selection:bg-[#074c88] selection:text-white">
       <Navbar />
 
-      {/* 1. HERO PROMOTIONAL SECTION: 2-COLUMN SPLIT WITH 3D MOBILE MOCKUP */}
-      <section className="relative overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-24 border-b border-slate-800">
-        {/* Background Radial Glow & Target Circles */}
-        <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#074c88]/25 blur-[140px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#f9c701]/15 blur-[140px] rounded-full pointer-events-none" />
-        <div className="absolute bottom-10 left-1/3 w-[400px] h-[400px] bg-[#db1219]/10 blur-[130px] rounded-full pointer-events-none" />
+      {/* 1. HERO PROMOTIONAL SECTION: ATHLETIC RANGE PRECISION STAGE */}
+      <section className="relative overflow-hidden pt-8 pb-16 sm:pt-14 sm:pb-24 border-b border-white/10">
+        {/* Architectural Range Grid & Concentric Target Outlines */}
+        <div className="absolute inset-0 range-grid-bg opacity-35 pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[640px] h-[640px] rounded-full border border-white/[0.04] pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[440px] h-[440px] rounded-full border border-white/[0.06] pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[240px] h-[240px] rounded-full border border-white/[0.08] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Column: Headlines, Highlights, and CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
               {/* Top Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#074c88]/20 border border-[#074c88]/40 text-[#38bdf8] text-xs font-bold shadow-lg shadow-[#074c88]/10">
-                <Sparkles className="w-4 h-4 text-[#f9c701] animate-spin" />
-                <span>{t('แพลตฟอร์มระบบจองสนามยิงธนู R-CHERY • LINE LIFF & POS SaaS', 'R-CHERY Archery Platform • LINE LIFF & POS SaaS')}</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-white/10 text-slate-200 text-xs font-mono shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-[#f9c701] font-bold">R-CHERY ARCHERY OS</span>
+                <span className="text-slate-500">•</span>
+                <span>{t('ระบบบริหารสนามยิงธนูสากล & LINE LIFF', 'World Archery Standard Range OS')}</span>
               </div>
 
               {/* Main Title */}
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12]">
-                {t('เปลี่ยนสนามยิงธนูของคุณสู่', 'Transform Your Archery Range With')} <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-[#38bdf8] to-[#f9c701]">
-                  {t('ระบบจองผ่าน LINE OA & Walk-in POS', 'LINE OA Booking & Walk-in POS')}
+                {t('ระบบจัดการสนามยิงธนู', 'Archery Range OS &')} <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-white to-[#f9c701]">
+                  {t('LINE OA Booking & Live POS', 'LINE OA Booking & Live POS')}
                 </span>
               </h1>
 
               {/* Subtitle */}
-              <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
                 {t(
-                  'ให้ลูกค้าเปิดเช็กเลนยิง 10m - 70m ได้ด้วยตนเองผ่าน LINE OA เซ็น Digital Safety Waiver สแกนจ่ายพร้อมเพย์ QR และรับบัตร E-Ticket ทันที พร้อมระบบ Live Monitor และเคาน์เตอร์ Walk-in ครบวงจร',
-                  'Enable shooters to reserve 10m-70m lanes directly on LINE, sign digital safety waivers, scan PromptPay QR, and get instant E-Tickets with live range timeline and walk-in counter POS.'
+                  'เปลี่ยนการจองผ่านสมุดกระดาษสู่ระบบดิจิทัลเต็มรูปแบบ ให้ผู้ยิงเช็กผังเลน 10m-70m แบบ Interactive เซ็น Digital Safety Waiver สแกนจ่าย PromptPay QR และแสดง E-Ticket เข้าสนามทันที พร้อมหน้าจอ POS เคาน์เตอร์และ Live Monitor นับเวลาถอยหลัง',
+                  'Replace manual paper logs with an athletic precision digital platform. Enable archers to book 10m-70m lanes, sign digital safety waivers, scan PromptPay QR, and enter with live E-Tickets backed by staff POS counters.'
                 )}
               </p>
 
               {/* 3 Key Value Props Pills */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
-                <div className="p-3 rounded-2xl bg-[#09172c]/80 border border-[#132c4e] flex items-start gap-2.5">
-                  <div className="w-7 h-7 rounded-xl bg-[#074c88]/30 text-[#38bdf8] flex items-center justify-center shrink-0 border border-[#074c88]/40">
+                <div className="p-3 rounded-2xl bg-slate-900/80 border border-white/10 flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-xl bg-[#074c88]/30 text-[#f9c701] flex items-center justify-center shrink-0 border border-[#074c88]/50">
                     <Smartphone className="w-4 h-4" />
                   </div>
                   <div>
@@ -94,8 +98,8 @@ export default function PromotionalLandingPage() {
                   </div>
                 </div>
 
-                <div className="p-3 rounded-2xl bg-[#09172c]/80 border border-[#132c4e] flex items-start gap-2.5">
-                  <div className="w-7 h-7 rounded-xl bg-[#f9c701]/20 text-[#f9c701] flex items-center justify-center shrink-0 border border-[#f9c701]/30">
+                <div className="p-3 rounded-2xl bg-slate-900/80 border border-white/10 flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-xl bg-[#074c88]/30 text-[#f9c701] flex items-center justify-center shrink-0 border border-[#074c88]/50">
                     <PenTool className="w-4 h-4" />
                   </div>
                   <div>
@@ -104,8 +108,8 @@ export default function PromotionalLandingPage() {
                   </div>
                 </div>
 
-                <div className="p-3 rounded-2xl bg-[#09172c]/80 border border-[#132c4e] flex items-start gap-2.5">
-                  <div className="w-7 h-7 rounded-xl bg-[#db1219]/20 text-rose-400 flex items-center justify-center shrink-0 border border-[#db1219]/30">
+                <div className="p-3 rounded-2xl bg-slate-900/80 border border-white/10 flex items-start gap-2.5">
+                  <div className="w-8 h-8 rounded-xl bg-[#074c88]/30 text-[#f9c701] flex items-center justify-center shrink-0 border border-[#074c88]/50">
                     <Banknote className="w-4 h-4" />
                   </div>
                   <div>
@@ -119,7 +123,7 @@ export default function PromotionalLandingPage() {
               <div className="flex flex-wrap items-center gap-3.5 pt-2">
                 <Link
                   href="/register-shop"
-                  className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#0a5ea5] hover:to-[#17668a] text-white font-bold text-sm sm:text-base shadow-xl shadow-[#074c88]/40 border border-[#f9c701]/40 hover:border-[#f9c701] transition-all flex items-center gap-2 active:scale-95"
+                  className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] hover:to-[#135d7f] text-white font-bold text-sm sm:text-base shadow-[0_4px_20px_rgba(7,76,136,0.35)] border border-[#f9c701]/30 transition-all flex items-center gap-2 active:scale-95 cursor-pointer"
                 >
                   <Store className="w-5 h-5 text-[#f9c701]" />
                   <span>{t('เปิดสนามยิงธนูของคุณฟรี 14 วัน', 'Start 14-Day Free Range Trial')}</span>
@@ -130,30 +134,30 @@ export default function PromotionalLandingPage() {
                   href="http://localhost:3001/book/robin-archery-bkk"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-5 py-3.5 rounded-2xl bg-[#09172c] hover:bg-[#0e2240] text-slate-200 border border-[#1e3a66] font-semibold text-sm transition-all flex items-center gap-2 shadow-sm"
+                  className="px-5 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-white/10 font-semibold text-sm transition-all flex items-center gap-2 shadow-sm active:scale-95 cursor-pointer"
                 >
-                  <Smartphone className="w-4 h-4 text-[#38bdf8]" />
+                  <Smartphone className="w-4 h-4 text-sky-400" />
                   <span>{t('ทดลองจองใน LINE (LIFF :3001)', 'Try Booking on LINE (:3001)')}</span>
                   <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
                 </a>
               </div>
 
               {/* Trust Badge / Archery Disciplines */}
-              <div className="pt-2 flex items-center gap-3 text-xs text-slate-400 border-t border-slate-800/80">
-                <div className="flex -space-x-2">
-                  <div className="w-7 h-7 rounded-full bg-[#074c88] border-2 border-slate-950 flex items-center justify-center text-[10px] font-bold text-white">🏹</div>
-                  <div className="w-7 h-7 rounded-full bg-[#db1219] border-2 border-slate-950 flex items-center justify-center text-[10px] font-bold text-white">🎯</div>
-                  <div className="w-7 h-7 rounded-full bg-[#f9c701] border-2 border-slate-950 flex items-center justify-center text-[10px] font-bold text-slate-950">⚡</div>
+              <div className="pt-2 flex items-center gap-3 text-xs text-slate-400 border-t border-white/10">
+                <div className="flex -space-x-1.5">
+                  <div className="w-6 h-6 rounded-full bg-[#074c88] border border-slate-900 flex items-center justify-center text-[10px] font-bold text-white">🏹</div>
+                  <div className="w-6 h-6 rounded-full bg-[#db1219] border border-slate-900 flex items-center justify-center text-[10px] font-bold text-white">🎯</div>
+                  <div className="w-6 h-6 rounded-full bg-[#f9c701] border border-slate-900 flex items-center justify-center text-[10px] font-bold text-slate-950">⚡</div>
                 </div>
-                <span>
-                  {t('รองรับ Recurve, Compound, Barebow และยิงธนูสันทนาการ', 'Supports Recurve, Compound, Barebow, & Recreational')}
+                <span className="font-mono text-[11px]">
+                  {t('มาตรฐานสากล: Recurve, Compound, Barebow, WA 10-Ring Target Faces', 'World Archery: Recurve, Compound, Barebow & WA Target Faces')}
                 </span>
               </div>
             </div>
 
-            {/* Right Column: 3D Isometric Dual Phone Mockup */}
-            <div className="lg:col-span-5 flex items-center justify-center pt-8 lg:pt-0">
-              <MobileShowcase3D />
+            {/* Right Column: Tactical Range Radar Stage */}
+            <div className="lg:col-span-5 flex items-center justify-center pt-4 lg:pt-0">
+              <RangeTacticalStage />
             </div>
           </div>
         </div>
@@ -600,8 +604,8 @@ export default function PromotionalLandingPage() {
       </section>
 
       {/* 8. FINAL CONVERSION CTA BANNER */}
-      <section className="py-20 bg-gradient-to-b from-[#060e1a] to-[#074c88]/25 border-t border-slate-800 text-center relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#074c88]/20 blur-[120px] rounded-full pointer-events-none" />
+      <section className="py-20 bg-[#060e1a] border-t border-white/10 text-center relative overflow-hidden">
+        <div className="absolute inset-0 range-grid-bg opacity-30 pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
           <span className="text-xs font-bold uppercase tracking-wider text-[#f9c701] font-mono">
             Get Started in 2 Minutes
@@ -619,7 +623,7 @@ export default function PromotionalLandingPage() {
           <div className="pt-2">
             <Link
               href="/register-shop"
-              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#0a5ea5] hover:to-[#17668a] text-white font-bold text-base shadow-2xl shadow-[#074c88]/50 border border-[#f9c701]/40 hover:border-[#f9c701] transition-all inline-flex items-center gap-2 active:scale-95"
+              className="px-8 py-4 rounded-xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] hover:to-[#135d7f] text-white font-bold text-base shadow-[0_4px_25px_rgba(7,76,136,0.4)] border border-[#f9c701]/40 hover:border-[#f9c701] transition-all inline-flex items-center gap-2 active:scale-95 cursor-pointer"
             >
               <Store className="w-5 h-5 text-[#f9c701]" />
               <span>{t('เปิดสนามของคุณทันที (ฟรี 14 วัน)', 'Launch Your Range (14-Day Free Trial)')}</span>

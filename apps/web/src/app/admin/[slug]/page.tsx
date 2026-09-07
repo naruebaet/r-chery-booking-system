@@ -68,8 +68,8 @@ export default function ShopAdminDashboard() {
   const [editingLane, setEditingLane] = useState<Lane | null>(null);
 
   // Branding State
-  const [brandPrimary, setBrandPrimary] = useState('#059669');
-  const [brandAccent, setBrandAccent] = useState('#F59E0B');
+  const [brandPrimary, setBrandPrimary] = useState('#074c88');
+  const [brandAccent, setBrandAccent] = useState('#f9c701');
   const [savedBrandingAlert, setSavedBrandingAlert] = useState(false);
 
   const refreshData = () => {
@@ -179,9 +179,9 @@ export default function ShopAdminDashboard() {
 
   return (
     <ThemeProvider branding={shop.branding}>
-      <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
+      <div className="min-h-screen bg-[#060e1a] text-slate-100 flex flex-col range-grid-bg relative">
         {/* Top Shop Admin Bar */}
-        <header className="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-30 px-4 sm:px-8 py-3 flex items-center justify-between">
+        <header className="border-b border-white/10 bg-[#09172c]/90 backdrop-blur-xl sticky top-0 z-30 px-4 sm:px-8 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div
               className="w-10 h-10 rounded-xl flex items-center justify-center text-white shadow-md"
