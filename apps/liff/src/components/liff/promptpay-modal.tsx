@@ -98,7 +98,7 @@ export function PromptPayModal({
             type="button"
             disabled={isProcessing}
             onClick={handleSimulatePayment}
-            className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 active:scale-95 transition-all shadow-md flex items-center justify-center gap-2"
+            className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09579c] hover:to-[#146487] active:scale-95 transition-all shadow-md flex items-center justify-center gap-2"
           >
             {isProcessing ? (
               <span>{t('กำลังตรวจสอบยอดชำระ...', 'Verifying payment...')}</span>

@@ -23,12 +23,12 @@ export function LiffSimulatorHeader({ shop, currentUser, onSwitchUser }: LiffSim
   return (
     <div className="bg-slate-900 text-slate-200 text-xs px-3 py-2 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2 shadow-inner">
       <div className="flex items-center gap-2">
-        <div className="flex items-center gap-1 bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-mono text-[10px]">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <div className="flex items-center gap-1 bg-[#074c88]/30 text-[#f9c701] px-2 py-0.5 rounded-full font-mono text-[10px] border border-[#074c88]/40">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#f9c701] animate-pulse"></span>
           LINE LIFF v2.21
         </div>
         <span className="text-slate-400 hidden sm:inline">{t('เชื่อมต่อ LINE OA:', 'Connected LINE OA:')}</span>
-        <span className="font-semibold text-emerald-400">{shop.branding.lineOaId}</span>
+        <span className="font-semibold text-[#f9c701]">{shop.branding.lineOaId}</span>
       </div>
 
       <div className="flex items-center gap-2">
@@ -42,7 +42,7 @@ export function LiffSimulatorHeader({ shop, currentUser, onSwitchUser }: LiffSim
           />
           <span className="font-medium truncate max-w-[100px]">{currentUser.displayName}</span>
           {currentUser.isMember ? (
-            <span className="bg-amber-500/20 text-amber-300 text-[10px] px-1.5 py-0.2 rounded font-bold flex items-center gap-0.5">
+            <span className="bg-amber-500/20 text-[#f9c701] text-[10px] px-1.5 py-0.2 rounded font-bold flex items-center gap-0.5">
               <Sparkles className="w-2.5 h-2.5" />
               Member ({currentUser.membershipSessionsLeft} {t('ครั้ง', 'passes')})
             </span>
@@ -55,7 +55,7 @@ export function LiffSimulatorHeader({ shop, currentUser, onSwitchUser }: LiffSim
           <button
             onClick={() => onSwitchUser('beginner')}
             className={`px-2 py-0.5 rounded text-[11px] transition-colors ${
-              !currentUser.isMember ? 'bg-emerald-600 text-white font-bold' : 'bg-slate-800 text-slate-400 hover:text-white'
+              !currentUser.isMember ? 'bg-[#074c88] text-white font-bold' : 'bg-slate-800 text-slate-400 hover:text-white'
             }`}
           >
             {t('ผู้ใช้ทั่วไป', 'Guest')}

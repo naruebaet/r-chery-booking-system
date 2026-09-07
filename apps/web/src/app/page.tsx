@@ -46,29 +46,30 @@ export default function PromotionalLandingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-emerald-500 selection:text-white">
+    <div className="min-h-screen bg-[#050b14] text-slate-100 flex flex-col selection:bg-[#074c88] selection:text-white">
       <Navbar />
 
       {/* 1. HERO PROMOTIONAL SECTION: 2-COLUMN SPLIT WITH 3D MOBILE MOCKUP */}
       <section className="relative overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-24 border-b border-slate-800">
         {/* Background Radial Glow & Target Circles */}
-        <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/15 blur-[140px] rounded-full pointer-events-none" />
-        <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-amber-500/10 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#074c88]/25 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/3 right-10 w-[500px] h-[500px] bg-[#f9c701]/15 blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-10 left-1/3 w-[400px] h-[400px] bg-[#db1219]/10 blur-[130px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Column: Headlines, Highlights, and CTAs */}
             <div className="lg:col-span-7 space-y-6 text-left">
               {/* Top Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold shadow-lg shadow-emerald-500/10">
-                <Sparkles className="w-4 h-4 text-amber-400 animate-spin" />
-                <span>{t('แพลตฟอร์มระบบจองสนามยิงธนู • LINE LIFF & POS SaaS', 'Archery Range Management Platform • LINE LIFF & POS SaaS')}</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#074c88]/20 border border-[#074c88]/40 text-[#38bdf8] text-xs font-bold shadow-lg shadow-[#074c88]/10">
+                <Sparkles className="w-4 h-4 text-[#f9c701] animate-spin" />
+                <span>{t('แพลตฟอร์มระบบจองสนามยิงธนู R-CHERY • LINE LIFF & POS SaaS', 'R-CHERY Archery Platform • LINE LIFF & POS SaaS')}</span>
               </div>
 
               {/* Main Title */}
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12]">
                 {t('เปลี่ยนสนามยิงธนูของคุณสู่', 'Transform Your Archery Range With')} <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-teal-300 to-amber-300">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-[#38bdf8] to-[#f9c701]">
                   {t('ระบบจองผ่าน LINE OA & Walk-in POS', 'LINE OA Booking & Walk-in POS')}
                 </span>
               </h1>
@@ -83,8 +84,8 @@ export default function PromotionalLandingPage() {
 
               {/* 3 Key Value Props Pills */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
-                <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-2.5">
-                  <div className="w-7 h-7 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+                <div className="p-3 rounded-2xl bg-[#09172c]/80 border border-[#132c4e] flex items-start gap-2.5">
+                  <div className="w-7 h-7 rounded-xl bg-[#074c88]/30 text-[#38bdf8] flex items-center justify-center shrink-0 border border-[#074c88]/40">
                     <Smartphone className="w-4 h-4" />
                   </div>
                   <div>
@@ -93,8 +94,8 @@ export default function PromotionalLandingPage() {
                   </div>
                 </div>
 
-                <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-2.5">
-                  <div className="w-7 h-7 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                <div className="p-3 rounded-2xl bg-[#09172c]/80 border border-[#132c4e] flex items-start gap-2.5">
+                  <div className="w-7 h-7 rounded-xl bg-[#f9c701]/20 text-[#f9c701] flex items-center justify-center shrink-0 border border-[#f9c701]/30">
                     <PenTool className="w-4 h-4" />
                   </div>
                   <div>
@@ -103,8 +104,8 @@ export default function PromotionalLandingPage() {
                   </div>
                 </div>
 
-                <div className="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-2.5">
-                  <div className="w-7 h-7 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
+                <div className="p-3 rounded-2xl bg-[#09172c]/80 border border-[#132c4e] flex items-start gap-2.5">
+                  <div className="w-7 h-7 rounded-xl bg-[#db1219]/20 text-rose-400 flex items-center justify-center shrink-0 border border-[#db1219]/30">
                     <Banknote className="w-4 h-4" />
                   </div>
                   <div>
@@ -118,9 +119,9 @@ export default function PromotionalLandingPage() {
               <div className="flex flex-wrap items-center gap-3.5 pt-2">
                 <Link
                   href="/register-shop"
-                  className="px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-xl shadow-emerald-600/40 hover:shadow-emerald-600/60 transition-all flex items-center gap-2 active:scale-95"
+                  className="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#0a5ea5] hover:to-[#17668a] text-white font-bold text-sm sm:text-base shadow-xl shadow-[#074c88]/40 border border-[#f9c701]/40 hover:border-[#f9c701] transition-all flex items-center gap-2 active:scale-95"
                 >
-                  <Store className="w-5 h-5" />
+                  <Store className="w-5 h-5 text-[#f9c701]" />
                   <span>{t('เปิดสนามยิงธนูของคุณฟรี 14 วัน', 'Start 14-Day Free Range Trial')}</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -129,9 +130,9 @@ export default function PromotionalLandingPage() {
                   href="http://localhost:3001/book/robin-archery-bkk"
                   target="_blank"
                   rel="noreferrer"
-                  className="px-5 py-3.5 rounded-2xl bg-slate-900 hover:bg-slate-850 text-slate-200 border border-slate-700 font-semibold text-sm transition-all flex items-center gap-2 shadow-sm"
+                  className="px-5 py-3.5 rounded-2xl bg-[#09172c] hover:bg-[#0e2240] text-slate-200 border border-[#1e3a66] font-semibold text-sm transition-all flex items-center gap-2 shadow-sm"
                 >
-                  <Smartphone className="w-4 h-4 text-emerald-400" />
+                  <Smartphone className="w-4 h-4 text-[#38bdf8]" />
                   <span>{t('ทดลองจองใน LINE (LIFF :3001)', 'Try Booking on LINE (:3001)')}</span>
                   <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
                 </a>
@@ -140,9 +141,9 @@ export default function PromotionalLandingPage() {
               {/* Trust Badge / Archery Disciplines */}
               <div className="pt-2 flex items-center gap-3 text-xs text-slate-400 border-t border-slate-800/80">
                 <div className="flex -space-x-2">
-                  <div className="w-7 h-7 rounded-full bg-emerald-900 border-2 border-slate-950 flex items-center justify-center text-[10px] font-bold text-white">🏹</div>
-                  <div className="w-7 h-7 rounded-full bg-amber-900 border-2 border-slate-950 flex items-center justify-center text-[10px] font-bold text-white">🎯</div>
-                  <div className="w-7 h-7 rounded-full bg-blue-900 border-2 border-slate-950 flex items-center justify-center text-[10px] font-bold text-white">⚡</div>
+                  <div className="w-7 h-7 rounded-full bg-[#074c88] border-2 border-slate-950 flex items-center justify-center text-[10px] font-bold text-white">🏹</div>
+                  <div className="w-7 h-7 rounded-full bg-[#db1219] border-2 border-slate-950 flex items-center justify-center text-[10px] font-bold text-white">🎯</div>
+                  <div className="w-7 h-7 rounded-full bg-[#f9c701] border-2 border-slate-950 flex items-center justify-center text-[10px] font-bold text-slate-950">⚡</div>
                 </div>
                 <span>
                   {t('รองรับ Recurve, Compound, Barebow และยิงธนูสันทนาการ', 'Supports Recurve, Compound, Barebow, & Recreational')}
@@ -158,14 +159,14 @@ export default function PromotionalLandingPage() {
         </div>
       </section>
 
-      {/* 2. PAIN POINTS VS ARCHERHUB (WHY CHOOSE US) */}
+      {/* 2. PAIN POINTS VS R-CHERY (WHY CHOOSE US) */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#f9c701] font-mono">
             {t('จุดต่างที่คุ้มค่า Pain Points vs Solution', 'Pain Points vs Modern Solution')}
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-white">
-            {t('ทำไมสนามยิงธนูทั่วไทยถึงเลือก ArcherHub?', 'Why Archery Ranges Choose ArcherHub')}
+            {t('ทำไมสนามยิงธนูชั้นนำถึงเลือก R-CHERY?', 'Why Archery Ranges Choose R-CHERY')}
           </h2>
           <p className="text-sm text-slate-400">
             {t('บอกลาการจองผ่านสมุดจดเล่มเดิม และยกระดับประสบการณ์ให้ลูกค้ายิงธนูยุคใหม่', 'Say goodbye to paper logbooks and empower your archers with instant digital booking')}
@@ -174,7 +175,7 @@ export default function PromotionalLandingPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Traditional Range */}
-          <div className="p-6 sm:p-8 rounded-3xl bg-slate-900/50 border border-rose-900/40 space-y-5">
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#09172c]/40 border border-rose-900/40 space-y-5">
             <div className="flex items-center gap-2.5 text-rose-400 font-bold text-base border-b border-rose-900/40 pb-3">
               <XCircle className="w-5 h-5" />
               <span>{t('สนามยิงธนูแบบเดิม (Traditional Operations)', 'Traditional Archery Operations')}</span>
@@ -200,28 +201,28 @@ export default function PromotionalLandingPage() {
             </ul>
           </div>
 
-          {/* With ArcherHub */}
-          <div className="p-6 sm:p-8 rounded-3xl bg-emerald-950/20 border border-emerald-500/40 space-y-5 shadow-xl shadow-emerald-500/5">
-            <div className="flex items-center gap-2.5 text-emerald-400 font-bold text-base border-b border-emerald-500/30 pb-3">
-              <CheckCircle2 className="w-5 h-5" />
-              <span>{t('เมื่อใช้ระบบ ArcherHub Multi-Vendor SaaS', 'With ArcherHub Multi-Vendor SaaS')}</span>
+          {/* With R-CHERY */}
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#074c88]/15 border border-[#074c88]/50 space-y-5 shadow-xl shadow-[#074c88]/10">
+            <div className="flex items-center gap-2.5 text-[#38bdf8] font-bold text-base border-b border-[#074c88]/40 pb-3">
+              <CheckCircle2 className="w-5 h-5 text-[#f9c701]" />
+              <span>{t('เมื่อใช้ระบบ R-CHERY Multi-Vendor SaaS', 'With R-CHERY Multi-Vendor SaaS')}</span>
             </div>
 
             <ul className="space-y-3.5 text-xs sm:text-sm text-slate-200">
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-[#f9c701] shrink-0 mt-0.5" />
                 <span>{t('ลูกค้าเปิดจองผ่าน LINE OA + LIFF ได้ตลอด 24 ชม. ไม่ต้องโหลดแอปใหม่', 'Archers book 24/7 via LINE OA + LIFF with zero app installs required')}</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-[#f9c701] shrink-0 mt-0.5" />
                 <span>{t('Interactive Lane Map: เห็นเลนว่าง/ติดจองชัดเจน พร้อมระบบล็อกเลน 10 นาที', 'Interactive Lane Map: live lane availability with 10-minute automated hold')}</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-[#f9c701] shrink-0 mt-0.5" />
                 <span>{t('Digital Safety Waiver: เซ็นชื่อยินยอมบนจอมือถือก่อนยิงครั้งแรก บันทึกในระบบตลอดชีพ', 'Digital Safety Waiver: touch signature captured on smartphone with permanent audit trail')}</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-[#f9c701] shrink-0 mt-0.5" />
                 <span>{t('Walk-in Counter POS: เปิดเลนหน้าร้าน คิดเงินสดทอนเงิน และต่อเวลาได้ทันที', 'Walk-in Counter POS: open lanes in 15 seconds, calculate change, and extend sessions smoothly')}</span>
               </li>
             </ul>
@@ -229,11 +230,11 @@ export default function PromotionalLandingPage() {
         </div>
       </section>
 
-      {/* 3. 6 CORE PILLARS OF ARCHERHUB */}
-      <section id="features" className="py-20 bg-slate-900/40 border-y border-slate-800">
+      {/* 3. 6 CORE PILLARS OF R-CHERY */}
+      <section id="features" className="py-20 bg-[#061020]/60 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#f9c701] font-mono">
               {t('ฟังก์ชันครบวงจร Comprehensive Feature Set', 'Comprehensive Archery Features')}
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-white">
@@ -246,8 +247,8 @@ export default function PromotionalLandingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Feature 1 */}
-            <div className="p-6 rounded-3xl bg-slate-900 border border-slate-800 space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+            <div className="p-6 rounded-3xl bg-[#09172c] border border-[#132c4e] space-y-3 hover:border-[#074c88] hover:shadow-lg hover:shadow-[#074c88]/20 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[#074c88]/25 text-[#38bdf8] flex items-center justify-center border border-[#074c88]/40">
                 <Smartphone className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-base text-white">{t('1. จองผ่าน LINE OA & LIFF', '1. LINE OA & LIFF Booking')}</h3>
@@ -260,8 +261,8 @@ export default function PromotionalLandingPage() {
             </div>
 
             {/* Feature 2 */}
-            <div className="p-6 rounded-3xl bg-slate-900 border border-slate-800 space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+            <div className="p-6 rounded-3xl bg-[#09172c] border border-[#132c4e] space-y-3 hover:border-[#f9c701] hover:shadow-lg hover:shadow-[#f9c701]/20 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[#f9c701]/20 text-[#f9c701] flex items-center justify-center border border-[#f9c701]/30">
                 <Target className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-base text-white">{t('2. Interactive Lane Map (10m - 70m)', '2. Interactive Lane Map (10m - 70m)')}</h3>
@@ -274,8 +275,8 @@ export default function PromotionalLandingPage() {
             </div>
 
             {/* Feature 3 */}
-            <div className="p-6 rounded-3xl bg-slate-900 border border-slate-800 space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-400 flex items-center justify-center">
+            <div className="p-6 rounded-3xl bg-[#09172c] border border-[#132c4e] space-y-3 hover:border-[#db1219] hover:shadow-lg hover:shadow-[#db1219]/20 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[#db1219]/20 text-rose-400 flex items-center justify-center border border-[#db1219]/30">
                 <PenTool className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-base text-white">{t('3. Digital Safety Waiver Pad', '3. Digital Safety Waiver Pad')}</h3>
@@ -288,9 +289,9 @@ export default function PromotionalLandingPage() {
             </div>
 
             {/* Feature 4 */}
-            <div className="p-6 rounded-3xl bg-slate-900 border border-slate-800 space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center">
-                <Banknote className="w-4 h-4" />
+            <div className="p-6 rounded-3xl bg-[#09172c] border border-[#132c4e] space-y-3 hover:border-[#074c88] hover:shadow-lg hover:shadow-[#074c88]/20 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[#074c88]/25 text-[#38bdf8] flex items-center justify-center border border-[#074c88]/40">
+                <Banknote className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-base text-white">{t('4. Counter Walk-in POS & Live Timer', '4. Counter Walk-in POS & Live Timer')}</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
@@ -302,8 +303,8 @@ export default function PromotionalLandingPage() {
             </div>
 
             {/* Feature 5 */}
-            <div className="p-6 rounded-3xl bg-slate-900 border border-slate-800 space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-teal-500/20 text-teal-400 flex items-center justify-center">
+            <div className="p-6 rounded-3xl bg-[#09172c] border border-[#132c4e] space-y-3 hover:border-[#f9c701] hover:shadow-lg hover:shadow-[#f9c701]/20 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-[#f9c701]/20 text-[#f9c701] flex items-center justify-center border border-[#f9c701]/30">
                 <Award className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-base text-white">{t('5. อุปกรณ์เช่าตามปอนด์ & จองโค้ช', '5. Bow Poundage Gear & Coach Booking')}</h3>
@@ -316,8 +317,8 @@ export default function PromotionalLandingPage() {
             </div>
 
             {/* Feature 6 */}
-            <div className="p-6 rounded-3xl bg-slate-900 border border-slate-800 space-y-3 hover:border-emerald-500/50 transition-all">
-              <div className="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center">
+            <div className="p-6 rounded-3xl bg-[#09172c] border border-[#132c4e] space-y-3 hover:border-[#38bdf8] hover:shadow-lg hover:shadow-[#38bdf8]/20 transition-all">
+              <div className="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center border border-sky-500/30">
                 <Trophy className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-base text-white">{t('6. สมาชิก Member Pass & Score Companion', '6. Member Passes & Score Companion')}</h3>
@@ -335,7 +336,7 @@ export default function PromotionalLandingPage() {
       {/* 3.5 DETAILED INTERACTIVE LINE FLOW TABBED SHOWCASE */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#f9c701] font-mono">
             Interactive Walkthrough
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-white">
@@ -360,11 +361,11 @@ export default function PromotionalLandingPage() {
       </section>
 
       {/* 5. LIVE INTERACTIVE SHOWCASE DIRECTORY */}
-      <section id="demo-shops" className="py-20 bg-slate-900/40 border-y border-slate-800">
+      <section id="demo-shops" className="py-20 bg-[#061020]/60 border-y border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#f9c701] font-mono">
                 Live Interactive Showcase
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-white mt-1">
@@ -380,7 +381,7 @@ export default function PromotionalLandingPage() {
 
             <Link
               href="/register-shop"
-              className="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 self-start"
+              className="text-xs font-bold text-[#38bdf8] hover:text-[#7dd3fc] flex items-center gap-1 self-start"
             >
               <span>{t('เพิ่มสนามของคุณในระบบ', 'Register Your Range')}</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -391,17 +392,17 @@ export default function PromotionalLandingPage() {
             {shops.map((shop) => (
               <div
                 key={shop.id}
-                className="rounded-3xl bg-slate-900 border border-slate-800 p-6 flex flex-col justify-between hover:border-slate-700 transition-all hover:shadow-2xl space-y-5"
+                className="rounded-3xl bg-[#09172c] border border-[#132c4e] p-6 flex flex-col justify-between hover:border-[#074c88] transition-all hover:shadow-2xl hover:shadow-[#074c88]/20 space-y-5"
               >
                 <div className="space-y-3">
                   <div className="flex items-start justify-between">
                     <div
-                      className="w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-md"
-                      style={{ backgroundColor: shop.branding.primaryColor }}
+                      className="w-12 h-12 rounded-2xl flex items-center justify-center text-white shadow-md border border-[#f9c701]/30"
+                      style={{ backgroundColor: shop.branding.primaryColor || '#074c88' }}
                     >
-                      <Target className="w-6 h-6" />
+                      <Target className="w-6 h-6 text-[#f9c701]" />
                     </div>
-                    <span className="text-[10px] font-mono uppercase px-2.5 py-1 rounded-full bg-slate-800 text-emerald-400 font-bold border border-slate-700">
+                    <span className="text-[10px] font-mono uppercase px-2.5 py-1 rounded-full bg-slate-800 text-[#f9c701] font-bold border border-[#1e3a66]">
                       {shop.lanes.length} {t('เลน', 'Lanes')} ({shop.subscriptionPlan})
                     </span>
                   </div>
@@ -413,15 +414,15 @@ export default function PromotionalLandingPage() {
 
                   <div className="space-y-1.5 text-xs text-slate-400 pt-2 border-t border-slate-800/80">
                     <div className="flex items-center gap-2">
-                      <MapPin className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                      <MapPin className="w-3.5 h-3.5 text-[#f9c701] shrink-0" />
                       <span className="truncate">{shop.branding.address}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Clock className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                      <Clock className="w-3.5 h-3.5 text-[#38bdf8] shrink-0" />
                       <span>{shop.openTime} - {shop.closeTime} {t('น. (ทุกวัน)', 'Daily')}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Smartphone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                      <Smartphone className="w-3.5 h-3.5 text-[#38bdf8] shrink-0" />
                       <span>LINE OA: <strong className="text-slate-200">{shop.branding.lineOaId}</strong></span>
                     </div>
                   </div>
@@ -432,15 +433,15 @@ export default function PromotionalLandingPage() {
                     href={`http://localhost:3001/book/${shop.slug}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex-1 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/20 transition-all active:scale-95"
+                    className="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#0a5ea5] hover:to-[#17668a] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-[#074c88]/30 border border-[#f9c701]/30 transition-all active:scale-95"
                   >
-                    <Smartphone className="w-4 h-4" />
+                    <Smartphone className="w-4 h-4 text-[#f9c701]" />
                     <span>{t('เปิด LINE LIFF (:3001)', 'Open LINE LIFF (:3001)')}</span>
                   </a>
 
                   <Link
                     href={`/admin/${shop.slug}`}
-                    className="py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs flex items-center justify-center gap-1 transition-colors"
+                    className="py-2.5 px-3 rounded-xl bg-[#0d2140] hover:bg-[#153461] text-slate-200 border border-[#1e3a66] font-semibold text-xs flex items-center justify-center gap-1 transition-colors"
                   >
                     <span>{t('แดชบอร์ด', 'Dashboard')}</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -455,7 +456,7 @@ export default function PromotionalLandingPage() {
       {/* 6. SAAS PRICING & TIER COMPARISON */}
       <section id="pricing" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#f9c701] font-mono">
             Simple & Transparent Pricing
           </span>
           <h2 className="text-3xl sm:text-4xl font-black text-white">
@@ -467,12 +468,12 @@ export default function PromotionalLandingPage() {
 
           {/* Billing Switcher */}
           <div className="flex items-center justify-center gap-2 pt-2">
-            <div className="flex items-center gap-2 bg-slate-900 p-1 rounded-2xl border border-slate-800">
+            <div className="flex items-center gap-2 bg-[#09172c] p-1 rounded-2xl border border-[#132c4e]">
               <button
                 type="button"
                 onClick={() => setBillingCycle('monthly')}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-                  billingCycle === 'monthly' ? 'bg-slate-800 text-white shadow' : 'text-slate-400 hover:text-white'
+                  billingCycle === 'monthly' ? 'bg-[#0d2140] text-white shadow' : 'text-slate-400 hover:text-white'
                 }`}
               >
                 {t('ชำระรายเดือน', 'Monthly Billing')}
@@ -481,11 +482,11 @@ export default function PromotionalLandingPage() {
                 type="button"
                 onClick={() => setBillingCycle('annually')}
                 className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-1.5 ${
-                  billingCycle === 'annually' ? 'bg-emerald-600 text-white shadow' : 'text-slate-400 hover:text-white'
+                  billingCycle === 'annually' ? 'bg-[#074c88] text-white shadow-md shadow-[#074c88]/40 border border-[#f9c701]/30' : 'text-slate-400 hover:text-white'
                 }`}
               >
                 <span>{t('ชำระรายปี', 'Annual Billing')}</span>
-                <span className="text-[10px] bg-amber-400 text-slate-950 font-black px-1.5 py-0.2 rounded-full">
+                <span className="text-[10px] bg-[#f9c701] text-slate-950 font-black px-1.5 py-0.2 rounded-full">
                   {t('ลด 20%', 'Save 20%')}
                 </span>
               </button>
@@ -495,7 +496,7 @@ export default function PromotionalLandingPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {/* Starter */}
-          <div className="rounded-3xl bg-slate-950 border border-slate-800 p-6 space-y-5 flex flex-col justify-between">
+          <div className="rounded-3xl bg-[#09172c] border border-[#132c4e] p-6 space-y-5 flex flex-col justify-between">
             <div className="space-y-3">
               <h4 className="font-bold text-lg text-white">Starter Plan</h4>
               <p className="text-xs text-slate-400">{t('สำหรับสนามขนาดเล็ก 1-4 เลน', 'For small ranges (1-4 lanes)')}</p>
@@ -506,10 +507,10 @@ export default function PromotionalLandingPage() {
                 <span className="text-xs text-slate-400"> {t('/เดือน', '/mo')}</span>
               </div>
               <ul className="space-y-2.5 pt-4 border-t border-slate-800 text-xs text-slate-300">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('สูงสุด 4 เลนยิง', 'Up to 4 shooting lanes')}</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('เชื่อมต่อ LINE OA + LIFF', 'LINE OA + LIFF integration')}</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('สแกน PromptPay QR Payment', 'PromptPay Dynamic QR payments')}</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('เคาน์เตอร์ Walk-in พื้นฐาน', 'Basic Walk-in POS counter')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#38bdf8]" /> {t('สูงสุด 4 เลนยิง', 'Up to 4 shooting lanes')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#38bdf8]" /> {t('เชื่อมต่อ LINE OA + LIFF', 'LINE OA + LIFF integration')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#38bdf8]" /> {t('สแกน PromptPay QR Payment', 'PromptPay Dynamic QR payments')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#38bdf8]" /> {t('เคาน์เตอร์ Walk-in พื้นฐาน', 'Basic Walk-in POS counter')}</li>
               </ul>
             </div>
             <Link
@@ -521,8 +522,8 @@ export default function PromotionalLandingPage() {
           </div>
 
           {/* Pro */}
-          <div className="rounded-3xl bg-slate-950 border-2 border-emerald-500 p-6 space-y-5 flex flex-col justify-between shadow-2xl relative">
-            <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-emerald-500 text-white text-[11px] font-bold shadow-md">
+          <div className="rounded-3xl bg-[#09172c] border-2 border-[#f9c701] p-6 space-y-5 flex flex-col justify-between shadow-2xl shadow-[#074c88]/20 relative">
+            <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-[#f9c701] to-amber-500 text-slate-950 text-[11px] font-black shadow-md">
               {t('ยอดนิยมสำหรับสนามยิงธนู 🎯', 'Most Popular for Ranges 🎯')}
             </span>
             <div className="space-y-3">
@@ -535,24 +536,24 @@ export default function PromotionalLandingPage() {
                 <span className="text-xs text-slate-400"> {t('/เดือน', '/mo')}</span>
               </div>
               <ul className="space-y-2.5 pt-4 border-t border-slate-800 text-xs text-slate-300">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> <strong>{t('ไม่จำกัดจำนวนเลนยิง', 'Unlimited shooting lanes')}</strong></li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> Interactive Lane Map (10m - 70m)</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> Digital Safety Waiver Pad</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('Walk-in Counter POS พร้อมคำนวณเงินทอน', 'Walk-in Counter POS with change calculation')}</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('จัดการคันเช่าตามปอนด์ & โค้ช', 'Bow poundage gear & coach booking')}</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('บัตรสมาชิกรายเดือน & Punch Card', 'Monthly member passes & punch cards')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#f9c701]" /> <strong>{t('ไม่จำกัดจำนวนเลนยิง', 'Unlimited shooting lanes')}</strong></li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#f9c701]" /> Interactive Lane Map (10m - 70m)</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#f9c701]" /> Digital Safety Waiver Pad</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#f9c701]" /> {t('Walk-in Counter POS พร้อมคำนวณเงินทอน', 'Walk-in Counter POS with change calculation')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#f9c701]" /> {t('จัดการคันเช่าตามปอนด์ & โค้ช', 'Bow poundage gear & coach booking')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#f9c701]" /> {t('บัตรสมาชิกรายเดือน & Punch Card', 'Monthly member passes & punch cards')}</li>
               </ul>
             </div>
             <Link
               href="/register-shop"
-              className="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs text-center shadow-lg shadow-emerald-600/30 transition-all block"
+              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#0a5ea5] hover:to-[#17668a] text-white font-bold text-xs text-center shadow-lg shadow-[#074c88]/40 border border-[#f9c701]/40 transition-all block"
             >
               {t('ทดลองใช้งานฟรี 14 วัน', 'Start 14-Day Free Trial')}
             </Link>
           </div>
 
           {/* Enterprise */}
-          <div className="rounded-3xl bg-slate-950 border border-slate-800 p-6 space-y-5 flex flex-col justify-between">
+          <div className="rounded-3xl bg-[#09172c] border border-[#132c4e] p-6 space-y-5 flex flex-col justify-between">
             <div className="space-y-3">
               <h4 className="font-bold text-lg text-white">Enterprise</h4>
               <p className="text-xs text-slate-400">{t('สำหรับสโมสรใหญ่ หรือธุรกิจหลายสาขา', 'For multi-branch chains or national clubs')}</p>
@@ -563,10 +564,10 @@ export default function PromotionalLandingPage() {
                 <span className="text-xs text-slate-400"> {t('/เดือน', '/mo')}</span>
               </div>
               <ul className="space-y-2.5 pt-4 border-t border-slate-800 text-xs text-slate-300">
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('ทุกฟีเจอร์ในแพ็กเกจ Pro', 'Everything in Pro Plan')}</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('รองรับหลายสาขา (Multi-Branch)', 'Multi-Branch centralized dashboard')}</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> Custom Domain & Custom Branding</li>
-                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> {t('ซัพพอร์ตดูแลเฉพาะทาง 24/7', '24/7 Priority Support & SLA')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#38bdf8]" /> {t('ทุกฟีเจอร์ในแพ็กเกจ Pro', 'Everything in Pro Plan')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#38bdf8]" /> {t('รองรับหลายสาขา (Multi-Branch)', 'Multi-Branch centralized dashboard')}</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#38bdf8]" /> Custom Domain & Custom Branding</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#38bdf8]" /> {t('ซัพพอร์ตดูแลเฉพาะทาง 24/7', '24/7 Priority Support & SLA')}</li>
               </ul>
             </div>
             <Link
@@ -580,17 +581,17 @@ export default function PromotionalLandingPage() {
       </section>
 
       {/* 7. FAQ SECTION */}
-      <section className="py-20 bg-slate-900/40 border-t border-slate-800">
+      <section className="py-20 bg-[#061020]/60 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#f9c701] font-mono">
               Got Questions?
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-white">
               {t('คำถามที่พบบ่อย (FAQ)', 'Frequently Asked Questions')}
             </h2>
             <p className="text-sm text-slate-400">
-              {t('ทุกข้อสงสัยเกี่ยวกับการนำระบบ ArcherHub ไปใช้งานที่สนามของคุณ', 'Everything you need to know about setting up ArcherHub at your range')}
+              {t('ทุกข้อสงสัยเกี่ยวกับการนำระบบ R-CHERY ไปใช้งานที่สนามของคุณ', 'Everything you need to know about setting up R-CHERY at your range')}
             </p>
           </div>
 
@@ -599,9 +600,10 @@ export default function PromotionalLandingPage() {
       </section>
 
       {/* 8. FINAL CONVERSION CTA BANNER */}
-      <section className="py-20 bg-gradient-to-b from-slate-950 to-emerald-950/40 border-t border-slate-800 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 font-mono">
+      <section className="py-20 bg-gradient-to-b from-[#060e1a] to-[#074c88]/25 border-t border-slate-800 text-center relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#074c88]/20 blur-[120px] rounded-full pointer-events-none" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#f9c701] font-mono">
             Get Started in 2 Minutes
           </span>
           <h2 className="text-3xl sm:text-5xl font-black text-white">
@@ -609,17 +611,17 @@ export default function PromotionalLandingPage() {
           </h2>
           <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto">
             {t(
-              'เปิดสนามยิงธนูของคุณบนระบบ ArcherHub วันนี้ ทดลองใช้งานฟรี 14 วัน ไม่ต้องใช้บัตรเครดิต เชื่อมต่อ LINE OA ของร้านได้ทันที',
-              'Launch your archery range on ArcherHub today. Free 14-day trial, no credit card required. Connect your LINE OA instantly.'
+              'เปิดสนามยิงธนูของคุณบนระบบ R-CHERY วันนี้ ทดลองใช้งานฟรี 14 วัน ไม่ต้องใช้บัตรเครดิต เชื่อมต่อ LINE OA ของร้านได้ทันที',
+              'Launch your archery range on R-CHERY today. Free 14-day trial, no credit card required. Connect your LINE OA instantly.'
             )}
           </p>
 
           <div className="pt-2">
             <Link
               href="/register-shop"
-              className="px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-2xl shadow-emerald-600/40 hover:shadow-emerald-600/60 transition-all inline-flex items-center gap-2 active:scale-95"
+              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#0a5ea5] hover:to-[#17668a] text-white font-bold text-base shadow-2xl shadow-[#074c88]/50 border border-[#f9c701]/40 hover:border-[#f9c701] transition-all inline-flex items-center gap-2 active:scale-95"
             >
-              <Store className="w-5 h-5" />
+              <Store className="w-5 h-5 text-[#f9c701]" />
               <span>{t('เปิดสนามของคุณทันที (ฟรี 14 วัน)', 'Launch Your Range (14-Day Free Trial)')}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -628,8 +630,8 @@ export default function PromotionalLandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800 py-8 bg-slate-950 text-xs text-slate-500 text-center">
-        <p>© 2026 ArcherHub Thailand (Turborepo Monorepo Edition). {t('ระบบแพลตฟอร์มบริหารและจองสนามยิงธนู Multi-Vendor ครบวงจร', 'All-in-One Multi-Vendor Archery Range Booking & Management Platform')}</p>
+      <footer className="border-t border-slate-800 py-8 bg-[#040810] text-xs text-slate-500 text-center">
+        <p>© 2026 R-CHERY Platform (Turborepo Monorepo Edition). {t('ระบบแพลตฟอร์มบริหารและจองสนามยิงธนูครบวงจร', 'All-in-One Archery Range Booking & Management Platform')}</p>
       </footer>
     </div>
   );

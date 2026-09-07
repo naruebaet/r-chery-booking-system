@@ -30,7 +30,7 @@ export function AddonsSelector({
         <div className="flex items-center justify-between mb-2">
           <div>
             <h4 className="font-bold text-sm text-slate-900 flex items-center gap-1.5">
-              <UserCheck className="w-4 h-4 text-emerald-600" />
+              <UserCheck className="w-4 h-4 text-[#074c88]" />
               {t('ครูฝึก / โค้ชดูแลการยิง (แนะนำสำหรับมือใหม่)', 'Instructor / Archery Coach (Beginners)')}
             </h4>
             <p className="text-xs text-slate-500">{t('สอนพื้นฐาน จับคัน เล็งเป้า และความปลอดภัย 20-30 นาที', '20-30 min basics: stance, grip, aiming & safety')}</p>
@@ -43,7 +43,7 @@ export function AddonsSelector({
             onClick={() => onSelectCoach(null)}
             className={`p-3 rounded-xl border text-left flex items-center justify-between transition-all ${
               selectedCoach === null
-                ? 'border-emerald-600 bg-emerald-50/70 text-emerald-900'
+                ? 'border-[#074c88] bg-[#074c88]/10 text-[#074c88] font-medium'
                 : 'border-slate-200 bg-white hover:border-slate-300'
             }`}
           >
@@ -51,7 +51,7 @@ export function AddonsSelector({
               <p className="text-xs font-semibold">{t('ยิงด้วยตัวเอง (ไม่รับโค้ช)', 'Self-practice (No coach)')}</p>
               <p className="text-[11px] text-slate-500">{t('สำหรับผู้ที่มีประสบการณ์แล้ว', 'For experienced archers')}</p>
             </div>
-            {selectedCoach === null && <Check className="w-4 h-4 text-emerald-600" />}
+            {selectedCoach === null && <Check className="w-4 h-4 text-[#074c88]" />}
           </button>
 
           {coaches.map((coach) => {
@@ -67,7 +67,7 @@ export function AddonsSelector({
                 }
                 className={`p-3 rounded-xl border text-left flex items-center gap-3 transition-all ${
                   isSelected
-                    ? 'border-emerald-600 bg-emerald-50/70 ring-1 ring-emerald-600'
+                    ? 'border-[#074c88] bg-[#074c88]/10 ring-1 ring-[#074c88]'
                     : 'border-slate-200 bg-white hover:border-slate-300'
                 }`}
               >
@@ -79,11 +79,11 @@ export function AddonsSelector({
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
                     <p className="text-xs font-bold text-slate-900 truncate">{coach.name}</p>
-                    <span className="text-xs font-semibold text-emerald-600">+฿{coach.ratePerSession}</span>
+                    <span className="text-xs font-semibold text-[#074c88]">+฿{coach.ratePerSession}</span>
                   </div>
                   <p className="text-[11px] text-slate-500 truncate">{coach.specialty}</p>
                 </div>
-                {isSelected && <Check className="w-4 h-4 text-emerald-600 shrink-0" />}
+                {isSelected && <Check className="w-4 h-4 text-[#074c88] shrink-0" />}
               </button>
             );
           })}
@@ -94,7 +94,7 @@ export function AddonsSelector({
         <div className="flex items-center justify-between mb-2">
           <div>
             <h4 className="font-bold text-sm text-slate-900 flex items-center gap-1.5">
-              <Shield className="w-4 h-4 text-emerald-600" />
+              <Shield className="w-4 h-4 text-[#074c88]" />
               {t('อุปกรณ์เช่าสำหรับรอบนี้ (Rental Gear)', 'Rental Gear & Bow Sets')}
             </h4>
             <p className="text-xs text-slate-500">{t('คันธนู ปลอกแขน ซองใส่ลูก พร้อมลูกธนูครบเซ็ต', 'Bows, armguards, finger tabs, quivers and full arrow sets')}</p>
@@ -112,7 +112,7 @@ export function AddonsSelector({
                 key={item.id}
                 className={`p-3 rounded-xl border flex items-center justify-between transition-all ${
                   isSelected
-                    ? 'border-emerald-600 bg-emerald-50/50'
+                    ? 'border-[#074c88] bg-[#074c88]/10'
                     : 'border-slate-200 bg-white hover:border-slate-300'
                 }`}
               >
@@ -127,13 +127,13 @@ export function AddonsSelector({
                 </div>
 
                 <div className="flex items-center gap-3 shrink-0">
-                  <span className="text-xs font-bold text-emerald-600">+฿{item.price}</span>
+                  <span className="text-xs font-bold text-[#074c88]">+฿{item.price}</span>
                   <button
                     type="button"
                     onClick={() => onToggleEquipment(item, detailLabel)}
                     className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 transition-all ${
                       isSelected
-                        ? 'bg-emerald-600 text-white'
+                        ? 'bg-gradient-to-r from-[#074c88] to-[#10516e] text-white shadow-sm'
                         : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                     }`}
                   >

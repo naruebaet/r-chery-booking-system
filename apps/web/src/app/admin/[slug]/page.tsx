@@ -97,7 +97,7 @@ export default function ShopAdminDashboard() {
     return (
       <div className="min-h-screen flex items-center justify-center p-4 bg-slate-900 text-white">
         <div className="text-center space-y-3">
-          <Target className="w-10 h-10 text-emerald-400 mx-auto animate-bounce" />
+          <Target className="w-10 h-10 text-[#f9c701] mx-auto animate-bounce" />
           <h2 className="text-xl font-bold">กำลังโหลดข้อมูลแดชบอร์ด...</h2>
         </div>
       </div>
@@ -192,7 +192,7 @@ export default function ShopAdminDashboard() {
             <div>
               <div className="flex items-center gap-2">
                 <h1 className="font-bold text-base text-white tracking-tight">{shop.name}</h1>
-                <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">
+                <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-[#074c88]/25 text-[#f9c701] font-bold border border-[#074c88]/40">
                   {shop.subscriptionPlan} Tier
                 </span>
               </div>
@@ -215,9 +215,9 @@ export default function ShopAdminDashboard() {
                   alert(t('ขณะนี้เลนเต็มทุกช่อง กรุณารอเลนว่าง หรือต่อคิว', 'All lanes currently occupied. Please wait for an available slot.'));
                 }
               }}
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-600/30 transition-all active:scale-95"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] shadow-md shadow-[#074c88]/30 transition-all active:scale-95"
             >
-              <Plus className="w-4 h-4" />
+              <Plus className="w-4 h-4 text-[#f9c701]" />
               <span>{t('+ เปิดเลน Walk-in', '+ Open Walk-in Lane')}</span>
             </button>
 
@@ -225,9 +225,9 @@ export default function ShopAdminDashboard() {
               href={`http://localhost:3001/book/${shop.slug}`}
               target="_blank"
               rel="noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 hover:bg-emerald-900/80 transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-[#f9c701] bg-[#074c88]/20 border border-[#074c88]/40 hover:bg-[#074c88]/30 transition-colors"
             >
-              <Smartphone className="w-3.5 h-3.5" />
+              <Smartphone className="w-3.5 h-3.5 text-[#f9c701]" />
               <span>LINE LIFF (:3001)</span>
               <ExternalLink className="w-3 h-3" />
             </a>
@@ -248,7 +248,7 @@ export default function ShopAdminDashboard() {
             onClick={() => setActiveTab('monitor')}
             className={`py-3 border-b-2 flex items-center gap-2 transition-all whitespace-nowrap ${
               activeTab === 'monitor'
-                ? 'border-emerald-500 text-emerald-400 font-bold'
+                ? 'border-[#f9c701] text-[#f9c701] font-bold'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -261,7 +261,7 @@ export default function ShopAdminDashboard() {
             onClick={() => setActiveTab('pos')}
             className={`py-3 border-b-2 flex items-center gap-2 transition-all whitespace-nowrap ${
               activeTab === 'pos'
-                ? 'border-emerald-500 text-emerald-400 font-bold'
+                ? 'border-[#f9c701] text-[#f9c701] font-bold'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -274,7 +274,7 @@ export default function ShopAdminDashboard() {
             onClick={() => setActiveTab('bookings')}
             className={`py-3 border-b-2 flex items-center gap-2 transition-all whitespace-nowrap ${
               activeTab === 'bookings'
-                ? 'border-emerald-500 text-emerald-400 font-bold'
+                ? 'border-[#f9c701] text-[#f9c701] font-bold'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -287,7 +287,7 @@ export default function ShopAdminDashboard() {
             onClick={() => setActiveTab('lanes')}
             className={`py-3 border-b-2 flex items-center gap-2 transition-all whitespace-nowrap ${
               activeTab === 'lanes'
-                ? 'border-emerald-500 text-emerald-400 font-bold'
+                ? 'border-[#f9c701] text-[#f9c701] font-bold'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -300,7 +300,7 @@ export default function ShopAdminDashboard() {
             onClick={() => setActiveTab('branding')}
             className={`py-3 border-b-2 flex items-center gap-2 transition-all whitespace-nowrap ${
               activeTab === 'branding'
-                ? 'border-emerald-500 text-emerald-400 font-bold'
+                ? 'border-[#f9c701] text-[#f9c701] font-bold'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -313,7 +313,7 @@ export default function ShopAdminDashboard() {
             onClick={() => setActiveTab('saas')}
             className={`py-3 border-b-2 flex items-center gap-2 transition-all whitespace-nowrap ${
               activeTab === 'saas'
-                ? 'border-emerald-500 text-emerald-400 font-bold'
+                ? 'border-[#f9c701] text-[#f9c701] font-bold'
                 : 'border-transparent text-slate-400 hover:text-slate-200'
             }`}
           >
@@ -324,8 +324,8 @@ export default function ShopAdminDashboard() {
 
         {/* Global Notice Alert */}
         {walkInSuccessNotice && (
-          <div className="bg-emerald-600 text-white text-xs font-bold px-4 py-2.5 flex items-center justify-center gap-2 animate-in fade-in">
-            <CheckCircle className="w-4 h-4" />
+          <div className="bg-[#074c88] text-white text-xs font-bold px-4 py-2.5 flex items-center justify-center gap-2 animate-in fade-in">
+            <CheckCircle className="w-4 h-4 text-[#f9c701]" />
             <span>{walkInSuccessNotice}</span>
           </div>
         )}
@@ -345,15 +345,15 @@ export default function ShopAdminDashboard() {
             <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4">
               <span className="text-xs text-slate-400 font-medium">{t('เลนว่างพร้อมเปิด', 'Available Lanes')}</span>
               <div className="flex items-baseline justify-between mt-1">
-                <span className="text-2xl font-black text-emerald-400">{availableCount} {t('เลน', 'Lanes')}</span>
-                <span className="text-xs text-emerald-500 font-medium">{t('พร้อมรับ Walk-in', 'Walk-in Ready')}</span>
+                <span className="text-2xl font-black text-[#f9c701]">{availableCount} {t('เลน', 'Lanes')}</span>
+                <span className="text-xs text-[#f9c701] font-medium">{t('พร้อมรับ Walk-in', 'Walk-in Ready')}</span>
               </div>
             </div>
 
             <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4">
               <span className="text-xs text-slate-400 font-medium">{t('ยอดจองรวมวันนี้', "Today's Bookings")}</span>
               <div className="flex items-baseline justify-between mt-1">
-                <span className="text-2xl font-black text-amber-400">{bookings.length} {t('รอบ', 'sessions')}</span>
+                <span className="text-2xl font-black text-[#f9c701]">{bookings.length} {t('รอบ', 'sessions')}</span>
                 <span className="text-xs text-slate-500">LINE + Walk-in</span>
               </div>
             </div>
@@ -362,7 +362,7 @@ export default function ShopAdminDashboard() {
               <span className="text-xs text-slate-400 font-medium">{t('รายได้สะสมวันนี้', "Today's Revenue")}</span>
               <div className="flex items-baseline justify-between mt-1">
                 <span className="text-2xl font-black text-white">฿{todayRevenue.toLocaleString()}</span>
-                <span className="text-xs text-emerald-400 font-medium">{t('เงินสด + พร้อมเพย์', 'Cash + PromptPay')}</span>
+                <span className="text-xs text-[#f9c701] font-medium">{t('เงินสด + พร้อมเพย์', 'Cash + PromptPay')}</span>
               </div>
             </div>
           </div>
@@ -390,14 +390,14 @@ export default function ShopAdminDashboard() {
                         isOccupied
                           ? 'bg-rose-950/20 border-rose-900/60 ring-1 ring-rose-500/30'
                           : isAvailable
-                          ? 'bg-slate-900/80 border-slate-800 hover:border-emerald-500/60'
+                          ? 'bg-slate-900/80 border-slate-800 hover:border-[#074c88]/80'
                           : 'bg-slate-900/40 border-slate-800 opacity-60'
                       }`}
                     >
                       <div>
                         <div className="flex items-center justify-between mb-2">
                           <div className="flex items-center gap-2">
-                            <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-slate-950 text-emerald-400 border border-emerald-500/20">
+                            <span className="font-mono text-xs font-bold px-2 py-0.5 rounded bg-slate-950 text-[#f9c701] border border-[#f9c701]/30">
                               {lane.distance}
                             </span>
                             <span className="font-bold text-sm text-white">{t('เลน', 'Lane')} #{lane.number}</span>
@@ -408,7 +408,7 @@ export default function ShopAdminDashboard() {
                               isOccupied
                                 ? 'bg-rose-500/20 text-rose-400'
                                 : isAvailable
-                                ? 'bg-emerald-500/20 text-emerald-400'
+                                ? 'bg-[#074c88]/30 text-[#f9c701] border border-[#074c88]/40'
                                 : 'bg-amber-500/20 text-amber-400'
                             }`}
                           >
@@ -454,9 +454,9 @@ export default function ShopAdminDashboard() {
                           <button
                             type="button"
                             onClick={() => setWalkInTargetLane(lane)}
-                            className="w-full py-2 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/20 transition-all active:scale-95"
+                            className="w-full py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] flex items-center justify-center gap-1.5 shadow-md shadow-[#074c88]/25 transition-all active:scale-95"
                           >
-                            <Plus className="w-3.5 h-3.5" />
+                            <Plus className="w-3.5 h-3.5 text-[#f9c701]" />
                             <span>{t('เปิดเลน Walk-in ด่วน', 'Quick Open Walk-in')}</span>
                           </button>
                         ) : (
@@ -505,7 +505,7 @@ export default function ShopAdminDashboard() {
                 <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
                   <div className="flex items-center justify-between">
                     <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                      <Target className="w-4 h-4 text-emerald-400" />
+                      <Target className="w-4 h-4 text-[#f9c701]" />
                       {t('1. เลือกเลนยิงที่ต้องการเปิด', '1. Select Shooting Lane')}
                     </h4>
                     <span className="text-xs text-slate-400">{availableCount} {t('เลนว่าง', 'Lanes available')}</span>
@@ -524,7 +524,7 @@ export default function ShopAdminDashboard() {
                           onClick={() => setWalkInTargetLane(l)}
                           className={`p-3 rounded-xl border text-left transition-all ${
                             isSelected
-                              ? 'bg-emerald-950 border-emerald-500 ring-2 ring-emerald-500/50'
+                              ? 'bg-[#074c88]/40 border-[#f9c701] ring-2 ring-[#f9c701]/50 shadow-md'
                               : isAvail
                               ? 'bg-slate-950 border-slate-800 hover:border-slate-700'
                               : 'bg-slate-950/40 border-slate-900 opacity-40 cursor-not-allowed'
@@ -532,12 +532,12 @@ export default function ShopAdminDashboard() {
                         >
                           <div className="flex items-center justify-between">
                             <span className="font-bold text-xs text-white">{t('เลน', 'Lane')} {l.number}</span>
-                            <span className="font-mono text-[10px] text-emerald-400">{l.distance}</span>
+                            <span className="font-mono text-[10px] text-[#f9c701]">{l.distance}</span>
                           </div>
                           <p className="text-[10px] text-slate-400 mt-1">฿{l.hourlyRate}{t('/ชม.', '/hr')}</p>
                           <span
                             className={`text-[9px] px-1.5 py-0.2 rounded mt-1 inline-block font-bold ${
-                              isAvail ? 'bg-emerald-500/20 text-emerald-400' : 'bg-rose-500/20 text-rose-400'
+                              isAvail ? 'bg-[#074c88]/30 text-[#f9c701]' : 'bg-rose-500/20 text-rose-400'
                             }`}
                           >
                             {isAvail ? t('ว่าง', 'Available') : t('ยิงอยู่', 'Occupied')}
@@ -551,7 +551,7 @@ export default function ShopAdminDashboard() {
                 {/* 2. Duration & Guest Info */}
                 <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
                   <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                    <Clock className="w-4 h-4 text-emerald-400" />
+                    <Clock className="w-4 h-4 text-[#f9c701]" />
                     {t('2. เลือกระยะเวลาและข้อมูลลูกค้า', '2. Duration & Shooter Details')}
                   </h4>
 
@@ -571,7 +571,7 @@ export default function ShopAdminDashboard() {
                           onClick={() => setWalkInDuration(dur.mins)}
                           className={`py-2 rounded-xl text-xs font-semibold transition-all ${
                             walkInDuration === dur.mins
-                              ? 'bg-emerald-600 text-white shadow'
+                              ? 'bg-[#074c88] text-white shadow'
                               : 'bg-slate-950 text-slate-300 border border-slate-800 hover:bg-slate-800'
                           }`}
                         >
@@ -589,7 +589,7 @@ export default function ShopAdminDashboard() {
                         type="text"
                         value={walkInName}
                         onChange={(e) => setWalkInName(e.target.value)}
-                        className="w-full p-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white focus:border-emerald-500 focus:outline-none"
+                        className="w-full p-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white focus:border-[#074c88] focus:outline-none"
                       />
                     </div>
                     <div>
@@ -598,7 +598,7 @@ export default function ShopAdminDashboard() {
                         type="text"
                         value={walkInPhone}
                         onChange={(e) => setWalkInPhone(e.target.value)}
-                        className="w-full p-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white focus:border-emerald-500 focus:outline-none"
+                        className="w-full p-2.5 bg-slate-950 border border-slate-800 rounded-xl text-white focus:border-[#074c88] focus:outline-none"
                       />
                     </div>
                   </div>
@@ -607,7 +607,7 @@ export default function ShopAdminDashboard() {
                 {/* 3. Add-on Gear & Coach */}
                 <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
                   <h4 className="text-sm font-bold text-white flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-emerald-400" />
+                    <Shield className="w-4 h-4 text-[#f9c701]" />
                     {t('3. อุปกรณ์เช่า & ครูฝึกหน้าสนาม', '3. Rental Equipment & Range Coach')}
                   </h4>
 
@@ -626,12 +626,12 @@ export default function ShopAdminDashboard() {
                             </span>
                           </div>
                           <div className="flex items-center gap-3">
-                            <span className="text-emerald-400 font-bold">+฿{eq.price}</span>
+                            <span className="text-[#074c88] font-bold">+฿{eq.price}</span>
                             <button
                               type="button"
                               onClick={() => handleToggleWalkInEquipment(eq)}
                               className={`px-3 py-1 rounded-lg text-xs font-semibold ${
-                                isSelected ? 'bg-emerald-600 text-white' : 'bg-slate-800 text-slate-300'
+                                isSelected ? 'bg-[#074c88] text-white' : 'bg-slate-800 text-slate-300'
                               }`}
                             >
                               {isSelected ? t('เลือกแล้ว', 'Selected') : t('+ เพิ่ม', '+ Add')}
@@ -649,7 +649,7 @@ export default function ShopAdminDashboard() {
                 <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 shadow-xl space-y-4 sticky top-20">
                   <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                     <h4 className="font-bold text-sm text-white">{t('สรุปรายการคิดเงิน (POS Receipt)', 'Order Summary (POS Receipt)')}</h4>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#074c88]/25 text-[#f9c701] border border-[#074c88]/40 font-bold">
                       Walk-in Desk
                     </span>
                   </div>
@@ -672,7 +672,7 @@ export default function ShopAdminDashboard() {
 
                     <div className="border-t border-slate-800 pt-3 flex justify-between items-baseline">
                       <span className="text-sm font-bold text-white">{t('ยอดที่ต้องชำระ:', 'Total Due:')}</span>
-                      <span className="text-2xl font-black text-emerald-400">
+                      <span className="text-2xl font-black text-[#074c88]">
                         ฿{calculatedWalkInTotal.toLocaleString()}
                       </span>
                     </div>
@@ -687,11 +687,11 @@ export default function ShopAdminDashboard() {
                         onClick={() => setWalkInPaymentMethod('cash')}
                         className={`p-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
                           walkInPaymentMethod === 'cash'
-                            ? 'bg-emerald-600 text-white shadow'
+                            ? 'bg-[#074c88] text-white shadow'
                             : 'bg-slate-950 border border-slate-800 text-slate-300'
                         }`}
                       >
-                        <Banknote className="w-3.5 h-3.5" />
+                        <Banknote className="w-3.5 h-3.5 text-[#f9c701]" />
                         <span>{t('เงินสด (Cash)', 'Cash')}</span>
                       </button>
 
@@ -700,11 +700,11 @@ export default function ShopAdminDashboard() {
                         onClick={() => setWalkInPaymentMethod('promptpay')}
                         className={`p-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
                           walkInPaymentMethod === 'promptpay'
-                            ? 'bg-emerald-600 text-white shadow'
+                            ? 'bg-[#074c88] text-white shadow'
                             : 'bg-slate-950 border border-slate-800 text-slate-300'
                         }`}
                       >
-                        <QrCode className="w-3.5 h-3.5" />
+                        <QrCode className="w-3.5 h-3.5 text-[#f9c701]" />
                         <span>{t('สแกน QR โอน', 'PromptPay QR')}</span>
                       </button>
 
@@ -713,7 +713,7 @@ export default function ShopAdminDashboard() {
                         onClick={() => setWalkInPaymentMethod('credit_card')}
                         className={`p-2.5 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
                           walkInPaymentMethod === 'credit_card'
-                            ? 'bg-emerald-600 text-white shadow'
+                            ? 'bg-[#074c88] text-white shadow'
                             : 'bg-slate-950 border border-slate-800 text-slate-300'
                         }`}
                       >
@@ -730,7 +730,7 @@ export default function ShopAdminDashboard() {
                             : 'bg-slate-950 border border-slate-800 text-slate-300'
                         }`}
                       >
-                        <Sparkles className="w-3.5 h-3.5" />
+                        <Sparkles className="w-3.5 h-3.5 text-[#db1219]" />
                         <span>{t('ตัดสิทธิ์สมาชิก', 'Member Pass')}</span>
                       </button>
                     </div>
@@ -764,7 +764,7 @@ export default function ShopAdminDashboard() {
                       type="checkbox"
                       checked={waiverAgreed}
                       onChange={(e) => setWaiverAgreed(e.target.checked)}
-                      className="mt-0.5 rounded text-emerald-600 focus:ring-emerald-500 w-4 h-4 cursor-pointer"
+                      className="mt-0.5 rounded text-[#074c88] focus:ring-[#074c88] w-4 h-4 cursor-pointer"
                     />
                     <span className="text-[11px] text-slate-300">
                       {t('ลูกค้ารับทราบกฎความปลอดภัย & เซ็น Waiver หน้าเคาน์เตอร์เรียบร้อยแล้ว', 'Customer acknowledged safety rules & signed waiver at counter')}
@@ -776,9 +776,9 @@ export default function ShopAdminDashboard() {
                     type="button"
                     disabled={!walkInTargetLane || !waiverAgreed}
                     onClick={() => handleSubmitWalkIn()}
-                    className="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2 transition-all active:scale-95"
+                    className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] disabled:opacity-50 text-white font-bold text-sm shadow-lg shadow-[#074c88]/30 flex items-center justify-center gap-2 transition-all active:scale-95"
                   >
-                    <Play className="w-4 h-4" />
+                    <Play className="w-4 h-4 text-[#f9c701]" />
                     <span>{t('เปิดเลน & บันทึกการรับเงินทันที', 'Open Lane & Confirm Payment')}</span>
                   </button>
                 </div>
@@ -815,7 +815,7 @@ export default function ShopAdminDashboard() {
                     <tbody className="divide-y divide-slate-800">
                       {bookings.map((b) => (
                         <tr key={b.id} className="hover:bg-slate-800/40 transition-colors">
-                          <td className="p-3 font-mono font-bold text-emerald-400">{b.bookingCode}</td>
+                          <td className="p-3 font-mono font-bold text-[#f9c701]">{b.bookingCode}</td>
                           <td className="p-3">
                             <span className="font-bold text-white block">{b.customerName}</span>
                             <span className="text-[10px] text-slate-400">{b.customerPhone}</span>
@@ -833,15 +833,15 @@ export default function ShopAdminDashboard() {
                           </td>
                           <td className="p-3">
                             <span className="font-semibold text-slate-200">{t('เลน', 'Lane')} {b.laneNumber}</span>
-                            <span className="text-[10px] text-emerald-400 block font-mono">{t('ระยะ', 'Dist')} {b.laneDistance}</span>
+                            <span className="text-[10px] text-[#f9c701] block font-mono">{t('ระยะ', 'Dist')} {b.laneDistance}</span>
                           </td>
                           <td className="p-3 font-medium text-slate-300">{b.timeSlot}</td>
                           <td className="p-3 uppercase font-mono text-[10px] text-slate-400">{b.paymentMethod}</td>
                           <td className="p-3 font-bold text-white">฿{b.totalAmount}</td>
                           <td className="p-3">
                             {b.checkedInAt ? (
-                              <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-semibold text-[10px] flex items-center gap-1 w-fit">
-                                <CheckCircle className="w-3 h-3" />
+                              <span className="px-2 py-0.5 rounded-full bg-[#074c88]/25 text-[#f9c701] font-semibold text-[10px] flex items-center gap-1 w-fit border border-[#074c88]/40">
+                                <CheckCircle className="w-3 h-3 text-[#f9c701]" />
                                 {t('เช็คอินแล้ว', 'Checked-in')}
                               </span>
                             ) : (
@@ -858,7 +858,7 @@ export default function ShopAdminDashboard() {
                                   checkInBooking(b.id);
                                   refreshData();
                                 }}
-                                className="px-3 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition-all"
+                                className="px-3 py-1 bg-[#074c88] hover:bg-[#09599e] text-white rounded-lg text-xs font-bold transition-all shadow-sm"
                               >
                                 {t('สแกนเช็คอิน', 'Check-in')}
                               </button>
@@ -890,7 +890,7 @@ export default function ShopAdminDashboard() {
                   <div key={lane.id} className="p-4 bg-slate-900 border border-slate-800 rounded-2xl space-y-3">
                     <div className="flex items-center justify-between">
                       <h4 className="font-bold text-sm text-white">{t('เลน', 'Lane')} #{lane.number}</h4>
-                      <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-800 text-emerald-400">
+                      <span className="font-mono text-xs px-2 py-0.5 rounded bg-slate-800 text-[#f9c701]">
                         {lane.distance}
                       </span>
                     </div>
@@ -898,7 +898,7 @@ export default function ShopAdminDashboard() {
                     <div className="space-y-1 text-xs text-slate-400">
                       <p>{t('ชื่อเรียก:', 'Name:')} <span className="text-slate-200 font-medium">{lane.name}</span></p>
                       <p>{t('ประเภทคัน:', 'Bow Type:')} <span className="text-slate-200 font-medium capitalize">{lane.type}</span></p>
-                      <p>{t('ราคาต่อชั่วโมง:', 'Hourly Rate:')} <span className="text-emerald-400 font-bold">฿{lane.hourlyRate}</span></p>
+                      <p>{t('ราคาต่อชั่วโมง:', 'Hourly Rate:')} <span className="text-[#074c88] font-bold">฿{lane.hourlyRate}</span></p>
                     </div>
 
                     <button
@@ -920,14 +920,14 @@ export default function ShopAdminDashboard() {
             <div className="max-w-2xl bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
               <div>
                 <h3 className="font-bold text-base text-white flex items-center gap-2">
-                  <Palette className="w-5 h-5 text-emerald-400" />
+                  <Palette className="w-5 h-5 text-[#f9c701]" />
                   {t('การปรับแต่งสี Branding & Theming (White-Label)', 'Branding & Theming (White-Label)')}
                 </h3>
               </div>
 
               {savedBrandingAlert && (
-                <div className="p-3 rounded-xl bg-emerald-950/60 border border-emerald-500 text-emerald-300 text-xs font-semibold flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4" />
+                <div className="p-3 rounded-xl bg-[#074c88]/30 border border-[#f9c701] text-[#f9c701] text-xs font-semibold flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-[#f9c701]" />
                   {t('บันทึกการตั้งค่าสีสำเร็จ! หน้า LIFF ได้รับการอัปเดตแล้ว', 'Theme saved successfully! Customer LIFF app is updated.')}
                 </div>
               )}
@@ -989,7 +989,7 @@ export default function ShopAdminDashboard() {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-md shadow-emerald-600/20"
+                    className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] text-white font-bold shadow-md shadow-[#074c88]/20 transition-all"
                   >
                     {t('บันทึกการตั้งค่าสี Branding', 'Save Theme Branding')}
                   </button>
@@ -1007,7 +1007,7 @@ export default function ShopAdminDashboard() {
               </h3>
               <div className="p-4 rounded-2xl bg-slate-950 border border-slate-800">
                 <h4 className="text-lg font-black text-white capitalize">{shop.subscriptionPlan} Plan</h4>
-                <p className="text-xs text-emerald-400 mt-1">{t('เปิดใช้งานอยู่ (Active)', 'Active')}</p>
+                <p className="text-xs text-[#f9c701] mt-1">{t('เปิดใช้งานอยู่ (Active)', 'Active')}</p>
               </div>
             </div>
           )}
@@ -1019,7 +1019,7 @@ export default function ShopAdminDashboard() {
             <div className="bg-slate-900 border border-slate-800 text-white w-full max-w-lg rounded-3xl p-6 space-y-4 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
               <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-xl bg-[#074c88]/25 text-[#f9c701] border border-[#074c88]/40 flex items-center justify-center">
                     <Plus className="w-4 h-4" />
                   </div>
                   <div>
@@ -1052,7 +1052,7 @@ export default function ShopAdminDashboard() {
                         type="button"
                         onClick={() => setWalkInDuration(d.mins)}
                         className={`py-2 rounded-xl font-bold ${
-                          walkInDuration === d.mins ? 'bg-emerald-600 text-white' : 'bg-slate-800 text-slate-300'
+                          walkInDuration === d.mins ? 'bg-[#074c88] text-white' : 'bg-slate-800 text-slate-300'
                         }`}
                       >
                         {d.label}
@@ -1096,12 +1096,12 @@ export default function ShopAdminDashboard() {
                           onClick={() => handleToggleWalkInEquipment(eq)}
                           className={`w-full p-2.5 rounded-xl border text-left flex items-center justify-between transition-colors ${
                             isSel
-                              ? 'bg-emerald-950/60 border-emerald-500 text-white'
+                              ? 'bg-[#074c88]/30 border-[#f9c701] text-white'
                               : 'bg-slate-950 border-slate-800 text-slate-300'
                           }`}
                         >
                           <span>{eq.name}</span>
-                          <span className="font-bold text-emerald-400">+฿{eq.price}</span>
+                          <span className="font-bold text-[#074c88]">+฿{eq.price}</span>
                         </button>
                       );
                     })}
@@ -1123,7 +1123,7 @@ export default function ShopAdminDashboard() {
                         type="button"
                         onClick={() => setWalkInPaymentMethod(m.id as any)}
                         className={`py-2 px-3 rounded-xl font-semibold text-center ${
-                          walkInPaymentMethod === m.id ? 'bg-emerald-600 text-white' : 'bg-slate-800 text-slate-300'
+                          walkInPaymentMethod === m.id ? 'bg-[#074c88] text-white' : 'bg-slate-800 text-slate-300'
                         }`}
                       >
                         {m.label}
@@ -1135,7 +1135,7 @@ export default function ShopAdminDashboard() {
                 {/* Summary total */}
                 <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between">
                   <span className="text-xs text-slate-400">{t('ยอดชำระสุทธิ:', 'Total Net Due:')}</span>
-                  <span className="text-xl font-black text-emerald-400">฿{calculatedWalkInTotal.toLocaleString()}</span>
+                  <span className="text-xl font-black text-[#074c88]">฿{calculatedWalkInTotal.toLocaleString()}</span>
                 </div>
               </div>
 
@@ -1150,9 +1150,9 @@ export default function ShopAdminDashboard() {
                 <button
                   type="button"
                   onClick={() => handleSubmitWalkIn()}
-                  className="flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg flex items-center justify-center gap-1.5"
+                  className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] text-white font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 transition-all"
                 >
-                  <Play className="w-3.5 h-3.5" />
+                  <Play className="w-3.5 h-3.5 text-[#f9c701]" />
                   <span>{t('เปิดเลนทันที', 'Start Session Now')}</span>
                 </button>
               </div>
@@ -1225,7 +1225,7 @@ export default function ShopAdminDashboard() {
                   </button>
                   <button
                     type="submit"
-                    className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold"
+                    className="px-4 py-2 rounded-xl bg-[#074c88] hover:bg-[#09599e] text-white font-bold"
                   >
                     {t('บันทึก', 'Save')}
                   </button>

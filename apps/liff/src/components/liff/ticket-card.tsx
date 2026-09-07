@@ -34,21 +34,21 @@ export function TicketCard({ booking, shop, onOpenScorebook, onBookAnother }: Ti
 
   return (
     <div className="space-y-4 max-w-md mx-auto">
-      <div className="bg-emerald-600 text-white p-4 rounded-2xl shadow-lg flex items-center gap-3">
+      <div className="bg-gradient-to-r from-[#074c88] to-[#10516e] text-white p-4 rounded-2xl shadow-lg flex items-center gap-3">
         <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
-          <CheckCircle2 className="w-6 h-6 text-white" />
+          <CheckCircle2 className="w-6 h-6 text-[#f9c701]" />
         </div>
         <div>
           <h3 className="font-bold text-sm">{t('การจองเลนสำเร็จแล้ว!', 'Booking Confirmed!')}</h3>
-          <p className="text-xs text-emerald-100">{t('ระบบส่งใบยืนยันเข้าห้องแชท LINE OA ของคุณเรียบร้อย', 'Confirmation ticket sent to your LINE chat')}</p>
+          <p className="text-xs text-blue-100">{t('ระบบส่งใบยืนยันเข้าห้องแชท LINE OA ของคุณเรียบร้อย', 'Confirmation ticket sent to your LINE chat')}</p>
         </div>
       </div>
 
       <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden relative">
-        <div className="bg-slate-900 text-white p-4 relative">
+        <div className="bg-gradient-to-r from-[#060e1a] to-[#0d2140] text-white p-4 relative">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-[#074c88]/40 text-[#f9c701] flex items-center justify-center">
                 <Target className="w-5 h-5" />
               </div>
               <div>
@@ -56,7 +56,7 @@ export function TicketCard({ booking, shop, onOpenScorebook, onBookAnother }: Ti
                 <p className="text-[11px] text-slate-400">{t('E-Ticket บัตรเข้าสนามยิงธนู', 'Archery Range E-Ticket')}</p>
               </div>
             </div>
-            <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold">
+            <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[#f9c701]/20 text-[#f9c701] font-bold">
               {booking.paymentStatus === 'paid' ? t('ชำระแล้ว', 'Paid') : t('รอชำระ', 'Pending')}
             </span>
           </div>
@@ -69,7 +69,7 @@ export function TicketCard({ booking, shop, onOpenScorebook, onBookAnother }: Ti
               <h3 className="text-2xl font-black text-slate-900 mt-0.5">
                 {t('เลน', 'Lane')} {booking.laneNumber}
               </h3>
-              <p className="text-xs font-semibold text-emerald-600 mt-0.5">{t('ระยะ', 'Distance')} {booking.laneDistance}</p>
+              <p className="text-xs font-semibold text-[#074c88] mt-0.5">{t('ระยะ', 'Distance')} {booking.laneDistance}</p>
             </div>
 
             <div className="text-right">
@@ -82,7 +82,7 @@ export function TicketCard({ booking, shop, onOpenScorebook, onBookAnother }: Ti
           <div className="grid grid-cols-2 gap-3 text-xs">
             <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/60">
               <div className="flex items-center gap-1.5 text-slate-500 mb-1">
-                <Calendar className="w-3.5 h-3.5 text-emerald-600" />
+                <Calendar className="w-3.5 h-3.5 text-[#074c88]" />
                 <span>{t('วันที่ยิง', 'Date')}</span>
               </div>
               <p className="font-bold text-slate-900">{booking.date}</p>
@@ -90,7 +90,7 @@ export function TicketCard({ booking, shop, onOpenScorebook, onBookAnother }: Ti
 
             <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/60">
               <div className="flex items-center gap-1.5 text-slate-500 mb-1">
-                <Clock className="w-3.5 h-3.5 text-emerald-600" />
+                <Clock className="w-3.5 h-3.5 text-[#074c88]" />
                 <span>{t('รอบเวลา', 'Time Slot')}</span>
               </div>
               <p className="font-bold text-slate-900">{booking.timeSlot}</p>
@@ -98,18 +98,18 @@ export function TicketCard({ booking, shop, onOpenScorebook, onBookAnother }: Ti
           </div>
 
           {(booking.addons.equipment?.length || booking.addons.coach) && (
-            <div className="p-3 bg-emerald-50/60 border border-emerald-200/70 rounded-xl text-xs space-y-1.5">
-              <span className="font-bold text-emerald-950 flex items-center gap-1 text-[11px]">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
+            <div className="p-3 bg-[#074c88]/5 border border-[#074c88]/20 rounded-xl text-xs space-y-1.5">
+              <span className="font-bold text-[#074c88] flex items-center gap-1 text-[11px]">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#074c88]" />
                 {t('อุปกรณ์และบริการเสริม:', 'Add-on Gear & Coach:')}
               </span>
               {booking.addons.coach && (
-                <p className="text-emerald-900">
+                <p className="text-slate-800">
                   • <strong>{t('โค้ช:', 'Coach:')}</strong> {booking.addons.coach.name} (+฿{booking.addons.coach.price})
                 </p>
               )}
               {booking.addons.equipment?.map((eq, i) => (
-                <p key={i} className="text-emerald-900">
+                <p key={i} className="text-slate-800">
                   • <strong>{t('อุปกรณ์:', 'Gear:')}</strong> {eq.name} ({eq.details})
                 </p>
               ))}

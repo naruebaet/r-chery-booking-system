@@ -85,8 +85,8 @@ export function FaqAccordion() {
             key={idx}
             className={`rounded-2xl border transition-all overflow-hidden ${
               isOpen
-                ? 'bg-slate-900/90 border-emerald-500/50 shadow-lg'
-                : 'bg-slate-900/40 border-slate-800 hover:border-slate-700'
+                ? 'bg-[#09172c] border-[#f9c701]/60 shadow-lg shadow-[#074c88]/20'
+                : 'bg-[#09172c]/40 border-[#132c4e] hover:border-[#074c88]'
             }`}
           >
             <button
@@ -95,12 +95,12 @@ export function FaqAccordion() {
               className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 select-none"
             >
               <span className="font-bold text-sm sm:text-base text-white flex items-center gap-2.5">
-                <HelpCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                <HelpCircle className="w-4 h-4 text-[#f9c701] shrink-0" />
                 {faq.question[lang]}
               </span>
               <ChevronDown
                 className={`w-4 h-4 text-slate-400 transition-transform duration-200 shrink-0 ${
-                  isOpen ? 'rotate-180 text-emerald-400' : ''
+                  isOpen ? 'rotate-180 text-[#f9c701]' : ''
                 }`}
               />
             </button>

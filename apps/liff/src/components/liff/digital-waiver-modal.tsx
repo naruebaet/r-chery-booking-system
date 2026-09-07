@@ -100,9 +100,9 @@ export function DigitalWaiverModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-150">
       <div className="bg-white w-full max-w-md rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
-        <div className="p-4 bg-slate-900 text-white flex items-center justify-between">
+        <div className="p-4 bg-gradient-to-r from-[#060e1a] to-[#0d2140] text-white flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-[#db1219]/20 text-[#db1219] flex items-center justify-center">
               <ShieldAlert className="w-4 h-4" />
             </div>
             <div>
@@ -141,7 +141,7 @@ export function DigitalWaiverModal({
               type="checkbox"
               checked={agreedCheck}
               onChange={(e) => setAgreedCheck(e.target.checked)}
-              className="mt-0.5 rounded text-emerald-600 focus:ring-emerald-500 w-4 h-4 cursor-pointer"
+              className="mt-0.5 rounded text-[#074c88] focus:ring-[#074c88] w-4 h-4 cursor-pointer"
             />
             <span className="text-[11px] text-slate-700 font-medium">
               {t('ข้าพเจ้า (', 'I, (')}
@@ -153,7 +153,7 @@ export function DigitalWaiverModal({
           <div>
             <div className="flex items-center justify-between mb-1.5">
               <span className="text-[11px] font-bold text-slate-800 flex items-center gap-1">
-                <PenTool className="w-3.5 h-3.5 text-emerald-600" />
+                <PenTool className="w-3.5 h-3.5 text-[#074c88]" />
                 {t('เซ็นลายมือชื่อดิจิทัล', 'Digital Signature')}
               </span>
               <button
@@ -194,7 +194,7 @@ export function DigitalWaiverModal({
             type="button"
             disabled={!hasSignature || !agreedCheck}
             onClick={handleConfirm}
-            className="px-5 py-2 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-md flex items-center gap-1.5 transition-all"
+            className="px-5 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09579c] hover:to-[#146487] disabled:opacity-50 disabled:cursor-not-allowed shadow-md flex items-center gap-1.5 transition-all"
           >
             <Check className="w-4 h-4" />
             {t('ยินยอมและบันทึก', 'Accept & Sign')}

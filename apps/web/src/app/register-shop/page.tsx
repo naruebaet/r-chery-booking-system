@@ -138,12 +138,12 @@ export default function RegisterShopPage() {
 
       <main className="flex-1 py-12 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full space-y-10">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#074c88]/25 text-[#f9c701] text-xs font-semibold border border-[#074c88]/40">
             <Sparkles className="w-3.5 h-3.5" />
             {t('เปิดร้านง่ายๆ ใน 2 นาที ทดลองใช้งานฟรี 14 วัน', 'Easy setup in 2 minutes. Free 14-day trial.')}
           </div>
           <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-white">
-            {t('สมัครเปิดสนามยิงธนูบนแพลตฟอร์ม', 'Register Your Archery Range on ArcherHub')}
+            {t('สมัครเปิดสนามยิงธนูบนแพลตฟอร์ม R-CHERY', 'Register Your Archery Range on R-CHERY')}
           </h1>
           <p className="text-sm text-slate-400">
             {t(
@@ -156,7 +156,7 @@ export default function RegisterShopPage() {
         <form onSubmit={handleRegister} className="space-y-8">
           <div className="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
             <h3 className="text-base font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-              <Store className="w-5 h-5 text-emerald-400" />
+              <Store className="w-5 h-5 text-[#f9c701]" />
               {t('1. ข้อมูลสนามยิงธนูของคุณ', '1. Range Information')}
             </h3>
 
@@ -168,10 +168,10 @@ export default function RegisterShopPage() {
                 <input
                   type="text"
                   required
-                  placeholder={t('เช่น Golden Arrow Archery Club', 'e.g. Golden Arrow Archery Club')}
+                  placeholder={t('เช่น R-CHERY Archery Club', 'e.g. R-CHERY Archery Club')}
                   value={shopName}
                   onChange={(e) => setShopName(e.target.value)}
-                  className="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:border-emerald-500 focus:outline-none"
+                  className="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:border-[#074c88] focus:ring-1 focus:ring-[#074c88] focus:outline-none"
                 />
               </div>
 
@@ -185,7 +185,7 @@ export default function RegisterShopPage() {
                   placeholder="@yourarchery"
                   value={lineOaId}
                   onChange={(e) => setLineOaId(e.target.value)}
-                  className="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:border-emerald-500 focus:outline-none"
+                  className="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:border-[#074c88] focus:ring-1 focus:ring-[#074c88] focus:outline-none"
                 />
               </div>
 
@@ -199,7 +199,7 @@ export default function RegisterShopPage() {
                   placeholder="081-xxx-xxxx"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:border-emerald-500 focus:outline-none"
+                  className="w-full p-3 bg-slate-900 border border-slate-700 rounded-xl text-white text-sm focus:border-[#074c88] focus:ring-1 focus:ring-[#074c88] focus:outline-none"
                 />
               </div>
             </div>
@@ -207,7 +207,7 @@ export default function RegisterShopPage() {
 
           <div className="bg-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
             <h3 className="text-base font-bold text-white flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-amber-400" />
+              <Sparkles className="w-5 h-5 text-[#f9c701]" />
               {t('2. เลือกแพ็กเกจ SaaS สำหรับร้านค้า', '2. Select Range SaaS Plan')}
             </h3>
 
@@ -222,7 +222,7 @@ export default function RegisterShopPage() {
                     onClick={() => setPlan(p)}
                     className={`rounded-2xl p-5 border cursor-pointer transition-all flex flex-col justify-between ${
                       isSelected
-                        ? 'bg-slate-900 border-emerald-500 ring-2 ring-emerald-500/50 shadow-xl'
+                        ? 'bg-slate-900 border-[#f9c701] ring-2 ring-[#f9c701]/60 shadow-xl'
                         : 'bg-slate-900/40 border-slate-800 hover:border-slate-700'
                     }`}
                   >
@@ -241,9 +241,9 @@ export default function RegisterShopPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 text-white font-bold text-base shadow-xl shadow-emerald-600/30 flex items-center gap-2 mx-auto"
+              className="px-8 py-4 rounded-2xl bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] hover:to-[#146487] text-white font-bold text-base shadow-xl shadow-[#074c88]/40 flex items-center gap-2 mx-auto transition-all"
             >
-              <Store className="w-5 h-5" />
+              <Store className="w-5 h-5 text-[#f9c701]" />
               <span>{isSubmitting ? t('กำลังเปิดสนาม...', 'Setting Up Range...') : t('ยืนยันและเปิดสนามยิงธนูทันที', 'Confirm & Launch Range Now')}</span>
               <ArrowRight className="w-5 h-5" />
             </button>

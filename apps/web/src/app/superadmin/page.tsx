@@ -43,7 +43,7 @@ export default function SuperAdminPage() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="p-1.5 rounded-lg bg-emerald-500/20 text-emerald-400">
+              <span className="p-1.5 rounded-lg bg-[#074c88]/25 text-[#f9c701] border border-[#074c88]/40">
                 <ShieldCheck className="w-5 h-5" />
               </span>
               <h1 className="text-2xl font-black text-white">Platform Super Admin (Turborepo Edition)</h1>
@@ -55,9 +55,9 @@ export default function SuperAdminPage() {
 
           <Link
             href="/register-shop"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 shadow-md transition-all self-start"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] shadow-md shadow-[#074c88]/30 transition-all self-start"
           >
-            <Store className="w-4 h-4" />
+            <Store className="w-4 h-4 text-[#f9c701]" />
             {t('เพิ่มสนามใหม่ในระบบ', 'Register New Range')}
           </Link>
         </div>
@@ -66,16 +66,16 @@ export default function SuperAdminPage() {
           <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
             <span className="text-xs font-semibold text-slate-400 flex items-center justify-between">
               {t('SaaS MRR (รายได้รายเดือน)', 'SaaS MRR (Monthly Recurring Revenue)')}
-              <TrendingUp className="w-4 h-4 text-emerald-400" />
+              <TrendingUp className="w-4 h-4 text-[#f9c701]" />
             </span>
             <div className="text-2xl font-black text-white">฿{totalMRR.toLocaleString()}</div>
-            <p className="text-[11px] text-emerald-400 font-medium">{t('จากค่า Subscription ของสนาม', 'From active tenant subscriptions')}</p>
+            <p className="text-[11px] text-[#f9c701] font-medium">{t('จากค่า Subscription ของสนาม', 'From active tenant subscriptions')}</p>
           </div>
 
           <div className="p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
             <span className="text-xs font-semibold text-slate-400 flex items-center justify-between">
               {t('สนามยิงธนูที่เข้าร่วม', 'Active Archery Ranges')}
-              <Store className="w-4 h-4 text-blue-400" />
+              <Store className="w-4 h-4 text-sky-400" />
             </span>
             <div className="text-2xl font-black text-white">{shops.length} {t('สนาม', 'Ranges')}</div>
           </div>
@@ -97,12 +97,12 @@ export default function SuperAdminPage() {
                     rel="noreferrer"
                     className="px-3 py-1.5 rounded-xl text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 flex items-center gap-1.5"
                   >
-                    <Smartphone className="w-3.5 h-3.5 text-emerald-400" />
+                    <Smartphone className="w-3.5 h-3.5 text-[#f9c701]" />
                     LINE LIFF (:3001)
                   </a>
                   <Link
                     href={`/admin/${shop.slug}`}
-                    className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 flex items-center gap-1.5"
+                    className="px-3.5 py-1.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09599e] flex items-center gap-1.5 shadow-sm"
                   >
                     {t('แดชบอร์ด', 'Dashboard')}
                     <ChevronRight className="w-3.5 h-3.5" />

@@ -15,8 +15,8 @@ export const INITIAL_SHOPS: Shop[] = [
     slotDurationMinutes: 60,
     bufferMinutes: 10,
     branding: {
-      primaryColor: '#059669', // Emerald Green
-      accentColor: '#F59E0B',  // Amber / Gold (Bullseye 10)
+      primaryColor: '#074c88', // R-CHERY Royal Target Blue
+      accentColor: '#f9c701',  // R-CHERY Target Gold (10-Ring)
       lineOaId: '@robinarchery',
       welcomeMessage: 'ยินดีต้อนรับสู่ Robin Archery Arena! ยิงสนุก ปลอดภัย มีโค้ชคอยดูแล',
       address: '128/4 ถนนสุขุมวิท 71 พระโขนงเหนือ กรุงเทพมหานคร 10110',

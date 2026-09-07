@@ -2,12 +2,25 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-brand-blue: #074c88;
+  --color-brand-blue-hover: #09599e;
+  --color-brand-cyan: #10516e;
+  --color-brand-gold: #f9c701;
+  --color-brand-red: #db1219;
+  --color-brand-navy: #09172c;
+  --color-brand-dark: #060e1a;
+}
+
 :root {
-  --background: #0f172a;
+  --background: #060e1a;
   --foreground: #f8fafc;
-  --brand-primary: #059669;
-  --brand-accent: #F59E0B;
-  color-scheme: light dark;
+  --brand-primary: #074c88;
+  --brand-secondary: #10516e;
+  --brand-accent: #f9c701;
+  --brand-red: #db1219;
+  --brand-gold: #f9c701;
+  color-scheme: dark light;
 }
 
 body {
@@ -27,4 +40,24 @@ body {
 
 .border-brand-primary {
   border-color: var(--brand-primary);
+}
+
+.bg-brand-accent {
+  background-color: var(--brand-accent);
+}
+
+.text-brand-accent {
+  color: var(--brand-accent);
+}
+
+.border-brand-accent {
+  border-color: var(--brand-accent);
+}
+
+.bg-brand-red {
+  background-color: var(--brand-red);
+}
+
+.text-brand-red {
+  color: var(--brand-red);
 }

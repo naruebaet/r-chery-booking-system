@@ -100,11 +100,11 @@ export function ScoreCompanion({ shopName, distance, onBackToBooking }: ScoreCom
         </div>
         <div className="p-3 bg-white rounded-2xl border border-slate-200 shadow-sm">
           <p className="text-[10px] text-slate-500 font-semibold uppercase">{t('ลูกที่ยิงไป', 'Arrows Shot')}</p>
-          <p className="text-2xl font-black text-emerald-600 mt-0.5">{allArrows.length}</p>
+          <p className="text-2xl font-black text-[#074c88] mt-0.5">{allArrows.length}</p>
         </div>
         <div className="p-3 bg-white rounded-2xl border border-slate-200 shadow-sm">
           <p className="text-[10px] text-slate-500 font-semibold uppercase">{t('เฉลี่ย / ลูก', 'Avg / Arrow')}</p>
-          <p className="text-2xl font-black text-amber-600 mt-0.5">{averagePerArrow}</p>
+          <p className="text-2xl font-black text-[#f9c701] mt-0.5">{averagePerArrow}</p>
         </div>
       </div>
 
@@ -148,7 +148,7 @@ export function ScoreCompanion({ shopName, distance, onBackToBooking }: ScoreCom
             type="button"
             disabled={currentEnd.length === 0}
             onClick={handleFinishEnd}
-            className="flex-1 py-2 rounded-xl text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-700 disabled:opacity-40 shadow-sm transition-all"
+            className="flex-1 py-2 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#074c88] to-[#10516e] hover:from-[#09579c] hover:to-[#146487] disabled:opacity-40 shadow-sm transition-all"
           >
             {t('จบชุดนี้ (บันทึก End', 'Finish End (Save End')} #{ends.length + 1})
           </button>
@@ -191,12 +191,12 @@ export function ScoreCompanion({ shopName, distance, onBackToBooking }: ScoreCom
           >
             {savedSuccess ? (
               <>
-                <Check className="w-4 h-4 text-emerald-400" />
+                <Check className="w-4 h-4 text-[#f9c701]" />
                 <span>{t('บันทึกสถิติลงโปรไฟล์แล้ว!', 'Saved to your profile!')}</span>
               </>
             ) : (
               <>
-                <Save className="w-4 h-4 text-amber-400" />
+                <Save className="w-4 h-4 text-[#f9c701]" />
                 <span>{t('บันทึกประวัติการยิงรอบนี้', 'Save This Round')}</span>
               </>
             )}
