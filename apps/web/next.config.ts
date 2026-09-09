@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@archery/types", "@archery/store", "@archery/ui"],
+  output: "standalone",
+  transpilePackages: ["@archery/types", "@archery/store", "@archery/ui", "@archery/db"],
 };
 
 export default nextConfig;

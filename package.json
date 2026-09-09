@@ -15,5 +15,11 @@
   },
   "devDependencies": {
     "turbo": "^2.4.4"
+  },
+  "optionalDependencies": {
+    "@next/swc-linux-arm64-gnu": "^16.3.4",
+    "@next/swc-linux-x64-gnu": "^16.3.4",
+    "lightningcss-linux-arm64-gnu": "^1.32.0",
+    "lightningcss-linux-x64-gnu": "^1.32.0"
   }
 }

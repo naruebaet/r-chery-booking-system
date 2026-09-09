@@ -1,6 +1,6 @@
-node_modules
-.next
-.turbo
+**/node_modules
+**/.next
+**/.turbo
 .git
 .gitignore
 .DS_Store
@@ -10,4 +10,6 @@ yarn-debug.log*
 yarn-error.log*
 .vscode
 .idea
+data/*.db
+data/*.db-journal
 README.md
